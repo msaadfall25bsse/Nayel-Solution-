@@ -129,31 +129,63 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- PAGE HERO BANNER — Split: Left Dark Panel + Right Clear Video -->
   <!-- ========================================================================= -->
   <section class="page-hero-banner-light relative overflow-hidden">
-    <!-- Distinct Background Video Layer -->
     <div class="page-hero-video-wrapper">
       <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
         <source src="images/videos/gallery-tech-bg.mp4" type="video/mp4">
       </video>
       <div class="page-hero-video-overlay"></div>
     </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-        <i class="fa-solid fa-images"></i> WORK PORTFOLIO &amp; SHOWCASE
+    <div class="page-hero-split-content scroll-reveal">
+      <div class="page-hero-split-left">
+        <div class="hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+          <i class="fa-solid fa-images"></i> Work Portfolio &amp; Project Showcase
+        </div>
+        <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight">
+          Projects &amp; Case Studies <br><span class="text-gradient-multi">Visual Gallery</span>
+        </h1>
+        <p class="text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+          Explore our completed deployments across enterprise ERP, web platforms, AI applications, mobile systems, and specialized hardware simulators.
+        </p>
+        <div class="hero-breadcrumb flex items-center gap-2 text-xs font-medium">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+          <span>/</span>
+          <span class="active-crumb font-semibold">Projects Gallery</span>
+        </div>
       </div>
-      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
-        Projects &amp; Case Studies <br><span class="text-gradient-cyan">Gallery</span>
-      </h1>
-      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        Explore our completed deployments across enterprise ERP, web platforms, AI applications, and specialized hardware simulators.
-      </p>
-      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
-        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-cyan-600 font-semibold">Projects Gallery</span>
+      <div class="page-hero-split-right">
+        <div class="hero-stats-float scroll-reveal delay-200">
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div>
+              <div class="hero-stat-num">40+</div>
+              <div class="hero-stat-label">Showcased Deployments</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div>
+              <div class="hero-stat-num">6 Categories</div>
+              <div class="hero-stat-label">ERP, AI, Web, Mobile &amp; Hardware</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-star"></i></div>
+            <div>
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Production Tested &amp; Active</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-expand"></i></div>
+            <div>
+              <div class="hero-stat-num">Interactive</div>
+              <div class="hero-stat-label">HD Lightbox &amp; Live Demos</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -185,158 +217,329 @@
         </div>
       </div>
 
-      <!-- Gallery Grid -->
+      <!-- Gallery Grid (High Readability Dual-Zone Showcase) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Project 1: ERP Core -->
         <div data-gallery-cat="erp" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-100">
-          <img src="images/projects/erponclick-core-dashboard.jpg" alt="ERPonclick Global Enterprise" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/erponclick-core-dashboard.jpg" alt="ERPonclick Global Enterprise" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/erponclick-core-dashboard.jpg" data-caption="ERPonclick Global Enterprise - Real-Time Financial Ledger &amp; Supply Chain Analytics" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              Live Production
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">Enterprise ERP</span>
-                <h4 class="font-heading font-bold text-lg text-white">ERPonclick Global Core</h4>
-                <p class="text-xs text-slate-200">Financial Ledger, HR Payroll &amp; Inventory</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/erponclick-core-dashboard.jpg" data-caption="ERPonclick Global Enterprise - Real-Time Financial Ledger &amp; Supply Chain Analytics" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-cyan"><i class="fa-solid fa-cubes"></i> Enterprise ERP</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-cyan-600 transition-colors">ERPonclick Global Core</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Full double-entry financial ledger, biometric HR &amp; payroll calculation engine, and multi-warehouse inventory management built for global enterprises.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Finance Ledger</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Biometric HR</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Barcode POS</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-cyan-600 hover:text-cyan-700 transition-colors" data-src="images/projects/erponclick-core-dashboard.jpg" data-caption="ERPonclick Global Enterprise - Real-Time Financial Ledger &amp; Supply Chain Analytics">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">ERPonclick</span>
             </div>
           </div>
         </div>
 
         <!-- Project 2: LMS Academy -->
         <div data-gallery-cat="software" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-200">
-          <img src="images/projects/lms-academy-dashboard.jpg" alt="Aurora LMS Academy Portal" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/lms-academy-dashboard.jpg" alt="Aurora LMS Academy Portal" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/lms-academy-dashboard.jpg" data-caption="Nayel Aurora LMS Portal - Live Virtual Learning &amp; Faculty Management" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+              Live Platform
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-purple-300 uppercase tracking-wider">EdTech Suite</span>
-                <h4 class="font-heading font-bold text-lg text-white">Nayel Aurora LMS</h4>
-                <p class="text-xs text-slate-200">Live Virtual Classes &amp; Student Gradebook</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/lms-academy-dashboard.jpg" data-caption="Nayel Aurora LMS Portal - Live Virtual Learning &amp; Faculty Management" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-purple"><i class="fa-solid fa-graduation-cap"></i> EdTech LMS</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-purple-600 transition-colors">Nayel Aurora LMS Suite</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Modern online learning ecosystem featuring live video classroom integration, automated quiz grading, student progression trackers, and verifiable certificates.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Virtual Classroom</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Gradebooks</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">E-Certificates</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 transition-colors" data-src="images/projects/lms-academy-dashboard.jpg" data-caption="Nayel Aurora LMS Portal - Live Virtual Learning &amp; Faculty Management">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Aurora LMS</span>
             </div>
           </div>
         </div>
 
         <!-- Project 3: Mobile Suite -->
         <div data-gallery-cat="mobile" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-300">
-          <img src="images/projects/nayel-mobile-suite.jpg" alt="Cross-Platform Mobile App" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/nayel-mobile-suite.jpg" alt="Cross-Platform Mobile App" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/nayel-mobile-suite.jpg" data-caption="Nayel Mobile Suite - High-Speed Cross-Platform App" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+              iOS &amp; Android
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-pink-300 uppercase tracking-wider">Mobile App</span>
-                <h4 class="font-heading font-bold text-lg text-white">Nayel Mobile Suite</h4>
-                <p class="text-xs text-slate-200">iOS &amp; Android Real-time Sync</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/nayel-mobile-suite.jpg" data-caption="Nayel Mobile Suite - High-Speed Cross-Platform App" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-pink"><i class="fa-solid fa-mobile-screen"></i> Mobile App</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-pink-600 transition-colors">Nayel Mobile Suite</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              High-performance mobile application with offline-first synchronization, push notification triggers, biometric FaceID login, and real-time dashboard analytics.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Offline Sync</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Biometric ID</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Push Alerts</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-pink-600 hover:text-pink-700 transition-colors" data-src="images/projects/nayel-mobile-suite.jpg" data-caption="Nayel Mobile Suite - High-Speed Cross-Platform App">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Cross-Platform</span>
             </div>
           </div>
         </div>
 
         <!-- Project 4: Hardware Simulators -->
         <div data-gallery-cat="hardware" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-100">
-          <img src="images/services/simulators.png" alt="Industrial Hardware Simulator" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/services/simulators.png" alt="Industrial Hardware Simulator" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/services/simulators.png" data-caption="Hardware Simulator &amp; Defense Rig Cockpit" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              Hardware Rig
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-amber-300 uppercase tracking-wider">Simulators</span>
-                <h4 class="font-heading font-bold text-lg text-white">Defense &amp; Industrial Rig</h4>
-                <p class="text-xs text-slate-200">Real-time Embedded Hardware Control</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/services/simulators.png" data-caption="Hardware Simulator &amp; Defense Rig Cockpit" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-amber"><i class="fa-solid fa-microchip"></i> Simulators &amp; Hardware</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-amber-600 transition-colors">Defense &amp; Industrial Simulators</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Custom hardware-in-the-loop (HIL) testing rigs, precision PLC telemetry sensors, and physics-accurate simulation software for defense and flight trainers.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Embedded C++</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">PLC Sensors</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">3D Physics</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700 transition-colors" data-src="images/services/simulators.png" data-caption="Hardware Simulator &amp; Defense Rig Cockpit">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Hardware Rig</span>
             </div>
           </div>
         </div>
 
         <!-- Project 5: MediHub HMS -->
         <div data-gallery-cat="erp" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-200">
-          <img src="images/projects/healthcare-hms-suite.jpg" alt="Hospital Management System" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/healthcare-hms-suite.jpg" alt="Hospital Management System" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/healthcare-hms-suite.jpg" data-caption="MediHub Clinical HMS - Hospital Management System &amp; Diagnostic EMR" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Clinical EMR
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-blue-300 uppercase tracking-wider">Healthcare HMS</span>
-                <h4 class="font-heading font-bold text-lg text-white">MediHub Clinical HMS</h4>
-                <p class="text-xs text-slate-200">Live Patient Admissions, EMR &amp; Pharmacy</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/healthcare-hms-suite.jpg" data-caption="MediHub Clinical HMS - Hospital Management System &amp; Diagnostic EMR" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-blue"><i class="fa-solid fa-hospital"></i> Healthcare HMS</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-blue-600 transition-colors">MediHub Clinical HMS</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Comprehensive hospital information suite managing inpatient/outpatient admissions, electronic medical records (EMR), ICU bed allocation, and pharmacy dispensing.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Patient EMR</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Bed Allocation</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Pharmacy Sync</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors" data-src="images/projects/healthcare-hms-suite.jpg" data-caption="MediHub Clinical HMS - Hospital Management System &amp; Diagnostic EMR">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">MediHub Suite</span>
             </div>
           </div>
         </div>
 
         <!-- Project 6: Corporate Budgeting Forecast -->
         <div data-gallery-cat="erp" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-300">
-          <img src="images/projects/corporate-budgeting-forecast.jpg" alt="Corporate Budgeting System" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/corporate-budgeting-forecast.jpg" alt="Corporate Budgeting System" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/corporate-budgeting-forecast.jpg" data-caption="Quantum Finastra - Corporate Budgeting &amp; Capex Forecasting" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              FinTech Capex
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Budgeting FinTech</span>
-                <h4 class="font-heading font-bold text-lg text-white">Global Budgeting &amp; Capex</h4>
-                <p class="text-xs text-slate-200">Cost Center Breakdown &amp; Cash Flow Forecast</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/corporate-budgeting-forecast.jpg" data-caption="Quantum Finastra - Corporate Budgeting &amp; Capex Forecasting" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-emerald"><i class="fa-solid fa-chart-line"></i> FinTech &amp; Budgeting</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-emerald-600 transition-colors">Quantum FinTech Budgeting</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Multi-entity cost center allocation, OPEX/CAPEX forecasting engine, cash-flow projections, and automated variance audit reports for financial directors.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Multi-Currency</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Capex Model</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Variance Audit</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition-colors" data-src="images/projects/corporate-budgeting-forecast.jpg" data-caption="Quantum Finastra - Corporate Budgeting &amp; Capex Forecasting">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Quantum Fin</span>
             </div>
           </div>
         </div>
 
         <!-- Project 7: Global Marketplace -->
         <div data-gallery-cat="software" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-100">
-          <img src="images/projects/global-marketplace-dashboard.jpg" alt="Enterprise E-Commerce Platform" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/global-marketplace-dashboard.jpg" alt="Enterprise E-Commerce Platform" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/global-marketplace-dashboard.jpg" data-caption="Enterprise Multi-Vendor E-Commerce Platform" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              Multi-Vendor
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">E-Commerce</span>
-                <h4 class="font-heading font-bold text-lg text-white">Global Marketplace</h4>
-                <p class="text-xs text-slate-200">Multi-Vendor &amp; Payment Gateway Engine</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/global-marketplace-dashboard.jpg" data-caption="Enterprise Multi-Vendor E-Commerce Platform" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-cyan"><i class="fa-solid fa-cart-shopping"></i> E-Commerce Platform</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-cyan-600 transition-colors">Global Multi-Vendor Hub</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              High-throughput B2B/B2C online commerce platform with automated vendor commissions, warehouse dispatch tracking, and PCI-compliant checkout gateways.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Multi-Vendor</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Payment Gateway</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Live Tracking</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-cyan-600 hover:text-cyan-700 transition-colors" data-src="images/projects/global-marketplace-dashboard.jpg" data-caption="Enterprise Multi-Vendor E-Commerce Platform">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">E-Commerce</span>
             </div>
           </div>
         </div>
 
         <!-- Project 8: Dr. Samavia Clinic -->
         <div data-gallery-cat="erp" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-200">
-          <img src="images/projects/Dr.samavia.png" alt="Dr. Samavia Clinic HMS" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/Dr.samavia.png" alt="Dr. Samavia Clinic HMS" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/Dr.samavia.png" data-caption="Dr. Samavia Clinic - Hospital Management System" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Clinic Suite
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-blue-300 uppercase tracking-wider">Clinical HMS</span>
-                <h4 class="font-heading font-bold text-lg text-white">Dr. Samavia Clinic HMS</h4>
-                <p class="text-xs text-slate-200">Doctor Queue &amp; Patient Consultation</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/Dr.samavia.png" data-caption="Dr. Samavia Clinic - Hospital Management System" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-blue"><i class="fa-solid fa-user-doctor"></i> Clinic Management</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-blue-600 transition-colors">Dr. Samavia Clinic HMS</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Specialized outpatient clinic workflow suite with automated patient appointment queuing, digital e-prescriptions, diagnostic history, and invoice billing.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Doctor Queue</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Digital Rx</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Patient History</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors" data-src="images/projects/Dr.samavia.png" data-caption="Dr. Samavia Clinic - Hospital Management System">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Clinical Suite</span>
             </div>
           </div>
         </div>
 
         <!-- Project 9: UBT University CMS -->
         <div data-gallery-cat="software" class="gallery-item-wrapper gallery-thumb-card-light group scroll-reveal delay-300">
-          <img src="images/projects/1.jpg" alt="UBT CMS Portal" class="gallery-thumb-img h-64 w-full object-cover">
-          <div class="gallery-overlay">
+          <div class="gallery-thumb-img-wrapper relative">
+            <img src="images/projects/1.jpg" alt="UBT CMS Portal" class="gallery-thumb-img h-60 w-full object-cover">
+            <button type="button" class="zoom-btn open-lightbox-btn absolute top-3.5 right-3.5" data-src="images/projects/1.jpg" data-caption="University of Business &amp; Technology - CMS Portal" aria-label="Zoom Project">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold text-white flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+              University CMS
+            </div>
+          </div>
+          <div class="gallery-card-body">
             <div class="flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-bold text-purple-300 uppercase tracking-wider">Campus CMS</span>
-                <h4 class="font-heading font-bold text-lg text-white">UBT Institute CMS</h4>
-                <p class="text-xs text-slate-200">University Management &amp; Faculty</p>
-              </div>
-              <button type="button" class="zoom-btn open-lightbox-btn" data-src="images/projects/1.jpg" data-caption="University of Business &amp; Technology - CMS Portal" aria-label="Zoom Project">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span class="gallery-card-badge gallery-badge-purple"><i class="fa-solid fa-building-columns"></i> University CMS</span>
+              <span class="text-xs font-semibold text-slate-400">Deployed</span>
+            </div>
+            <h4 class="font-heading font-bold text-xl text-slate-900 group-hover:text-purple-600 transition-colors">UBT Institute Campus CMS</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Comprehensive university portal supporting course registration, automated faculty semester scheduling, grade audits, and student fee reconciliation.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Course Registry</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Faculty Portal</span>
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Tuition Billing</span>
+            </div>
+            <div class="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
+              <button type="button" class="open-lightbox-btn inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 transition-colors" data-src="images/projects/1.jpg" data-caption="University of Business &amp; Technology - CMS Portal">
+                <span>Inspect System Preview</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </button>
+              <span class="text-xs text-slate-400 font-medium">Campus CMS</span>
             </div>
           </div>
         </div>

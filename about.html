@@ -129,10 +129,10 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- PAGE HERO BANNER — Split: Left Dark Panel + Right Clear Video -->
   <!-- ========================================================================= -->
   <section class="page-hero-banner-light relative overflow-hidden">
-    <!-- Distinct Background Video Layer -->
+    <!-- Background Video Layer (full-width, right side clearest) -->
     <div class="page-hero-video-wrapper">
       <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
         <source src="images/videos/about-tech-bg.mp4" type="video/mp4">
@@ -140,23 +140,61 @@
       <div class="page-hero-video-overlay"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
-        <i class="fa-solid fa-building"></i> ABOUT NAYEL SOLUTIONS
+    <!-- Split Content: Left = Text on dark · Right = Video shines clear -->
+    <div class="page-hero-split-content scroll-reveal">
+      <!-- LEFT: Text on dark dim zone -->
+      <div class="page-hero-split-left">
+        <div class="hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+          <i class="fa-solid fa-building"></i> ABOUT NAYEL SOLUTIONS
+        </div>
+        <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight">
+          Empowering Enterprises with <br><span class="text-gradient-cyan">Intelligent Software</span>
+        </h1>
+        <p class="text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+          Transforming bold ideas into robust enterprise software, ERP suites, AI platforms, and electronic simulators across USA, Pakistan, and Saudi Arabia.
+        </p>
+        <div class="hero-breadcrumb flex items-center gap-2 text-xs font-medium">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+          <span>/</span>
+          <span class="active-crumb font-semibold">About Us</span>
+        </div>
       </div>
-      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
-        Empowering Enterprises with <br><span class="text-gradient-cyan">Intelligent Software</span>
-      </h1>
-      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        Transforming bold ideas into robust enterprise software, ERP suites, AI platforms, and electronic simulators across USA, Pakistan, and Saudi Arabia.
-      </p>
-      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
-        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-cyan-600 font-semibold">About Us</span>
+      <!-- RIGHT: Floating Stats Panel (visible on clear video side) -->
+      <div class="page-hero-split-right">
+        <div class="hero-stats-float scroll-reveal delay-200">
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <div class="hero-stat-num">19+</div>
+              <div class="hero-stat-label">Years of Tech Innovation</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <div class="hero-stat-num">3</div>
+              <div class="hero-stat-label">Global Offices: USA · PK · KSA</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div>
+              <div class="hero-stat-num">25+</div>
+              <div class="hero-stat-label">Enterprise Projects Deployed</div>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div>
+              <div class="hero-stat-num">MCT</div>
+              <div class="hero-stat-label">Microsoft Certified Trainers</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- ========================================================================= -->
   <!-- CONTINUOUS MOVING CREDENTIALS & TRUST MARQUEE -->
