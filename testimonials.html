@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Feedback &amp; Reviews - Nayel Solutions</title>
+  <meta name="description" content="Read authentic reviews and client testimonials for Nayel Solutions from enterprise executives across the USA, Pakistan, Saudi Arabia, and UAE.">
+  <link rel="shortcut icon" type="image/png" href="images/logo/logo-vertical.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0f172a',
+            brandSlate: '#1e293b',
+            brandBlue: '#2563eb',
+            brandCyan: '#0284c7',
+            brandNavy: '#0b132b',
+            brandLight: '#f8fafc',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Corporate Light Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-mesh-light opacity-60"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 grid-pattern-light opacity-40"></div>
+
+  <!-- Announcement Bar -->
+  <div class="relative z-50 bg-slate-900 text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-5">
+        <span class="text-cyan-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[7px]"></i> Verified Client Testimonials &amp; Case Studies</span>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400 transition-colors"><i class="fa-regular fa-envelope text-cyan-400"></i> info@nayelsolutions.com</a>
+        <a href="tel:+923278564834" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-400"></i> +92 327 8564834</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-300 text-[11px]"><i class="fa-solid fa-globe text-cyan-400"></i> Miami, USA · Islamabad, PK · Jeddah, KSA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300">
+    <div class="header-top-accent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo (Official Single Logo Image) -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center space-x-1 text-sm font-medium bg-white/90 p-1.5 rounded-full border border-slate-200/80 backdrop-blur-md shadow-sm">
+          <a href="index.html" class="nav-link-item">Home</a>
+          <a href="about.html" class="nav-link-item">About</a>
+          <a href="services.html" class="nav-link-item">Services</a>
+          <a href="products.html" class="nav-link-item">Products</a>
+          <a href="gallery.html" class="nav-link-item">Gallery</a>
+          <a href="testimonials.html" class="nav-link-item nav-link-active">Feedback</a>
+          <a href="news.html" class="nav-link-item">Milestones</a>
+          <a href="team.html" class="nav-link-item">Team</a>
+          <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 group">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-cyan-600 shadow-sm transition-colors">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l border-slate-200 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-9 w-auto object-contain">
+        </a>
+        <button id="closeMobileMenuBtn" type="button" class="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <nav class="mt-6 flex flex-col space-y-2 text-sm">
+        <a href="index.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Home</a>
+        <a href="about.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">About Us</a>
+        <a href="services.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Services</a>
+        <a href="products.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Products</a>
+        <a href="gallery.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Gallery</a>
+        <a href="testimonials.html" class="mobile-nav-link p-3 rounded-xl bg-cyan-50 text-cyan-700 font-bold border border-cyan-200">Client Reviews</a>
+        <a href="news.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Milestones &amp; News</a>
+        <a href="team.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Team</a>
+        <a href="contact.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="contact.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-indigo-600 text-white font-semibold text-sm shadow-md">Request Proposal</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- ========================================================================= -->
+  <section class="page-hero-banner-light relative overflow-hidden">
+    <!-- Distinct Background Video Layer -->
+    <div class="page-hero-video-wrapper">
+      <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
+        <source src="images/videos/testimonials-tech-bg.mp4" type="video/mp4">
+      </video>
+      <div class="page-hero-video-overlay"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+        <i class="fa-solid fa-star text-amber-500"></i> Verified Client Endorsements &amp; Reviews
+      </div>
+      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
+        Trusted by Global <br><span class="text-gradient-multi">Leaders &amp; Enterprises</span>
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Discover what our enterprise clients across USA, Pakistan, Saudi Arabia, and Europe say about our engineering precision, speed, and 24/7 dedicated support.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
+        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-cyan-700 font-semibold">Client Reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TRUST METRICS ROW -->
+  <!-- ========================================================================= -->
+  <section class="py-12 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center stagger-parent">
+        
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-cyan-600">5.0 / 5.0</p>
+          <div class="flex justify-center text-amber-500 text-xs my-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs font-medium text-slate-600">Client Satisfaction Score</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="100">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-indigo-600">35+</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Enterprise Deployments</p>
+          <p class="text-xs text-slate-500">Global Implementations</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="200">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-blue-600">98%</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Client Retention</p>
+          <p class="text-xs text-slate-500">Multi-Year Partnerships</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="300">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-emerald-600">24/7</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">SLA Technical Support</p>
+          <p class="text-xs text-slate-500">Zero-Downtime Guarantee</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CLIENT REVIEWS CONTINUOUS MOVING MARQUEE (Dual Moving Stream) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 relative overflow-hidden bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">Live Moving Testimonial Stream</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900">What Enterprise Leaders Say</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Continuous real feedback from our enterprise partners worldwide.</p>
+      </div>
+
+      <!-- Track 1: Smooth Continuous Left Scroll -->
+      <div class="marquee-container">
+        <div class="marquee-track-left">
+          
+          <!-- Review 1 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-cyan-50 border border-cyan-200">Verified Client</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Nayel Solutions built our custom ERP and accounting portal from scratch. Their agility, deep domain understanding of multi-currency tax, and 24/7 maintenance have transformed our operational efficiency."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                RK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Raza Khan</h4>
+                <p class="text-xs text-slate-500">COO · Logistics &amp; Retail Corp (Miami, USA)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-200">EdTech</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "The Nayel Academy LMS platform deployed for our network of colleges handled over 15,000 active students seamlessly. The automated quiz engine and WhatsApp fee integration saved hundreds of administrative hours."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                TA
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Tariq Al-Mansoor</h4>
+                <p class="text-xs text-slate-500">Director of Academic Affairs (Jeddah, KSA)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200">Healthcare</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Hospital HMS delivered by Nayel Solutions is rock solid. The electronic medical record keeping, pharmacy expiry alerts, and OPD bed assignments operate with zero lag."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                SN
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Sarah Naeem</h4>
+                <p class="text-xs text-slate-500">Head of IT · Shifa Allied Clinics (Islamabad, PK)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seamless Duplicate Loop of Track 1 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-cyan-50 border border-cyan-200">Verified Client</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Nayel Solutions built our custom ERP and accounting portal from scratch. Their agility, deep domain understanding of multi-currency tax, and 24/7 maintenance have transformed our operational efficiency."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                RK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Raza Khan</h4>
+                <p class="text-xs text-slate-500">COO · Logistics &amp; Retail Corp (Miami, USA)</p>
+              </div>
+            </div>
+          </div>
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-200">EdTech</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "The Nayel Academy LMS platform deployed for our network of colleges handled over 15,000 active students seamlessly. The automated quiz engine and WhatsApp fee integration saved hundreds of administrative hours."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                TA
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Tariq Al-Mansoor</h4>
+                <p class="text-xs text-slate-500">Director of Academic Affairs (Jeddah, KSA)</p>
+              </div>
+            </div>
+          </div>
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200">Healthcare</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Hospital HMS delivered by Nayel Solutions is rock solid. The electronic medical record keeping, pharmacy expiry alerts, and OPD bed assignments operate with zero lag."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                SN
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Sarah Naeem</h4>
+                <p class="text-xs text-slate-500">Head of IT · Shifa Allied Clinics (Islamabad, PK)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Track 2: Smooth Continuous Right Scroll -->
+      <div class="marquee-container">
+        <div class="marquee-track-right">
+          
+          <!-- Review 4 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200">Mobile &amp; Cloud</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Our on-demand Flutter mobile app was delivered 2 weeks ahead of schedule. The cloud microservices back-end on AWS scaled flawlessly during our nationwide product launch."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                MB
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Mansoor Bilal</h4>
+                <p class="text-xs text-slate-500">Product Lead · FinTech Solutions (Dubai, UAE)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200">Hardware &amp; IoT</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Designing and fabricating custom hardware test rigs requires rare cross-disciplinary engineering talent. Nayel Solutions delivered beyond our expectations."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                AK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Engr. Asad Khan</h4>
+                <p class="text-xs text-slate-500">Chief Systems Architect · AeroTech Systems</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200">E-Commerce &amp; Growth</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Their digital branding, corporate website development, and SEO campaigns increased our inbound qualified leads by over 240% in just six months."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-600 to-orange-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                ZH
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Zainab Hashmi</h4>
+                <p class="text-xs text-slate-500">Marketing Director · Elite Brands Global</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seamless Duplicate Loop of Track 2 -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200">Mobile &amp; Cloud</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Our on-demand Flutter mobile app was delivered 2 weeks ahead of schedule. The cloud microservices back-end on AWS scaled flawlessly during our nationwide product launch."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                MB
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Mansoor Bilal</h4>
+                <p class="text-xs text-slate-500">Product Lead · FinTech Solutions (Dubai, UAE)</p>
+              </div>
+            </div>
+          </div>
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200">Hardware &amp; IoT</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Designing and fabricating custom hardware test rigs requires rare cross-disciplinary engineering talent. Nayel Solutions delivered beyond our expectations."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                AK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Engr. Asad Khan</h4>
+                <p class="text-xs text-slate-500">Chief Systems Architect · AeroTech Systems</p>
+              </div>
+            </div>
+          </div>
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200">E-Commerce &amp; Growth</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Their digital branding, corporate website development, and SEO campaigns increased our inbound qualified leads by over 240% in just six months."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-600 to-orange-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                ZH
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Zainab Hashmi</h4>
+                <p class="text-xs text-slate-500">Marketing Director · Elite Brands Global</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FEATURED DETAILED CLIENT SUCCESS STORIES (3-Column Grid with 3D Tilt) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider">Detailed Case Endorsements</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900">Transformative Client Impact</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Real results achieved through our agile engineering methodologies.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-parent">
+        
+        <!-- Story 1 -->
+        <div class="glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card reveal-up">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">Retail &amp; Supply Chain</span>
+              <span class="text-xs text-slate-400 font-semibold">USA</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-slate-900">45% Faster Inventory Turnaround</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              "By integrating Nayel ERP with automated barcode scanning and real-time ledger sync, we eradicated reconciliation discrepancies across 14 warehouse hubs in Florida and Texas."
+            </p>
+          </div>
+          <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-800 font-bold flex items-center justify-center text-sm">
+              MS
+            </div>
+            <div>
+              <p class="font-heading font-bold text-sm text-slate-900">Michael Sterling</p>
+              <p class="text-xs text-slate-500">VP of Logistics · PrimeDistribution USA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card reveal-up" data-delay="100">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">Higher Education</span>
+              <span class="text-xs text-slate-400 font-semibold">Saudi Arabia</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-slate-900">100% Paperless Campus Operations</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              "Transitioning our university admissions, student portal, and grading workflow to the Nayel Academy LMS reduced paper processing times from 5 days to under 30 seconds."
+            </p>
+          </div>
+          <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-800 font-bold flex items-center justify-center text-sm">
+              FA
+            </div>
+            <div>
+              <p class="font-heading font-bold text-sm text-slate-900">Prof. Fahad Al-Ghamdi</p>
+              <p class="text-xs text-slate-500">Dean of Engineering · Western Horizon Institute</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card reveal-up" data-delay="200">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Healthcare Network</span>
+              <span class="text-xs text-slate-400 font-semibold">Pakistan</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-slate-900">Zero Patient Wait-Time Delays</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              "The custom HMS token generation and cloud pharmacy billing suite shortened patient check-in bottlenecks significantly while maintaining strict HIPAA/GDPR health compliance."
+            </p>
+          </div>
+          <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-sm">
+              ZB
+            </div>
+            <div>
+              <p class="font-heading font-bold text-sm text-slate-900">Dr. Zeeshan Bukhari</p>
+              <p class="text-xs text-slate-500">Medical Director · Apex Specialist Hospital</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CALL TO ACTION BANNER (Ultra-Clean Corporate Light with Gradient Card) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 relative overflow-hidden bg-slate-50/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-scale">
+      <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.2),_transparent_60%)] pointer-events-none"></div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white">Ready to Build Your Success Story?</h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mt-3 mb-8">
+          Join high-growth brands scaling their software architecture and digital operations with Nayel Solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:via-blue-500 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 hover:scale-105 active:scale-95 transition-all">
+            <span>Get Started Today</span>
+            <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
+          </a>
+          <a href="tel:+923278564834" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all">
+            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> Call +92 327 8564834
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CORPORATE MIDNIGHT NAVY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0b132b] text-slate-300 border-t border-slate-800/80 pt-16 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-10 w-auto object-contain brightness-0 invert">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enterprise IT Consulting, Bespoke Software Engineering, Hardware Lab &amp; Cross-Platform Cloud Solutions.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xs"></i></a>
+            <a href="https://wa.me/923278564834" target="_blank" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Navigation</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home Overview</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400 transition-colors">Company &amp; Story</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">All 12 IT Services</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">In-House Products</a></li>
+            <li><a href="gallery.html" class="hover:text-cyan-400 transition-colors">Project Portfolio</a></li>
+            <li><a href="testimonials.html" class="hover:text-cyan-400 transition-colors">Client Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Solutions -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Products &amp; Labs</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">ERP OnClick Enterprise</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Nayel Academy LMS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Hospital HMS Suite</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Retail POS Multi-Branch</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Embedded Systems Lab</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">DevOps &amp; Cloud Infra</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Global Offices</p>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-cyan-400 mt-0.5"></i> <span>Islamabad, PK · Miami, USA · Jeddah, KSA</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> <a href="tel:+923278564834" class="hover:text-white">+92 327 8564834</a></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> <a href="mailto:info@nayelsolutions.com" class="hover:text-white">info@nayelsolutions.com</a></p>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-semibold">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Accepting New Projects 2026
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Nayel Solutions. All rights reserved.</p>
+        <div class="flex items-center space-x-6 text-slate-400">
+          <a href="contact.html" class="hover:text-cyan-400">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-cyan-400">Terms of Service</a>
+          <a href="contact.html" class="hover:text-cyan-400">Security SLA</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+923278564834" class="flex items-center justify-center w-11 h-11 rounded-full bg-cyan-600 text-white shadow-lg hover:scale-110 transition-transform" aria-label="Call Direct">
+      <i class="fa-solid fa-phone text-base"></i>
+    </a>
+    <button id="scrollToTopBtn" type="button" aria-label="Scroll to top" class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-slate-700 shadow-md border border-slate-200 opacity-0 pointer-events-none transition-all hover:bg-slate-50">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

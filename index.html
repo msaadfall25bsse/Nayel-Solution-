@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nayel Solutions - Enterprise Software Development &amp; IT Consulting</title>
+  <meta name="description" content="Nayel Solutions is a premier technology consulting & software development company offering custom ERP systems, LMS, HMS, POS, AI automation, and cloud infrastructure.">
+  <link rel="shortcut icon" type="image/png" href="images/logo/logo-vertical.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0f172a',
+            brandSlate: '#1e293b',
+            brandBlue: '#2563eb',
+            brandCyan: '#0284c7',
+            brandNavy: '#0b132b',
+            brandLight: '#f8fafc',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Corporate Light Background Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-mesh-light opacity-60"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 grid-pattern-light opacity-40"></div>
+
+  <!-- ========================================================================= -->
+  <!-- Top Announcement & Contact Bar -->
+  <!-- ========================================================================= -->
+  <div class="relative z-50 bg-slate-900 text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-5">
+        <span class="flex items-center space-x-2 text-cyan-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span>Nayel Solutions · Enterprise IT &amp; Software Consulting</span>
+        </span>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-regular fa-envelope text-cyan-400"></i> info@nayelsolutions.com
+        </a>
+        <a href="tel:+923278564834" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-cyan-400"></i> +92 327 8564834
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-300 flex items-center gap-1.5 text-[11px]">
+          <i class="fa-solid fa-globe text-cyan-400"></i> Miami, USA · Islamabad, PK · Jeddah, KSA
+        </span>
+        <span class="text-slate-700">|</span>
+        <div class="flex items-center space-x-3 text-slate-400">
+          <a href="https://www.facebook.com/nayelsolutions/" target="_blank" class="hover:text-cyan-400 transition-colors" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com/SolutionsNayel" target="_blank" class="hover:text-cyan-400 transition-colors" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="hover:text-cyan-400 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/nayelsolutions/?hl=en" target="_blank" class="hover:text-cyan-400 transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- Main Header & Navigation -->
+  <!-- ========================================================================= -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300">
+    <div class="header-top-accent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo (Official Single Image Logo) -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center space-x-1 text-sm font-medium bg-white/90 p-1.5 rounded-full border border-slate-200/80 backdrop-blur-md shadow-sm">
+          <a href="index.html" class="nav-link-item nav-link-active">Home</a>
+          <a href="about.html" class="nav-link-item">About</a>
+          <a href="services.html" class="nav-link-item">Services</a>
+          <a href="products.html" class="nav-link-item">Products</a>
+          <a href="gallery.html" class="nav-link-item">Gallery</a>
+          <a href="testimonials.html" class="nav-link-item">Feedback</a>
+          <a href="news.html" class="nav-link-item">Milestones</a>
+          <a href="team.html" class="nav-link-item">Team</a>
+          <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+
+        <!-- CTA & Mobile Trigger -->
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 group">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button id="mobileMenuBtn" type="button" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-cyan-600 shadow-sm transition-colors">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- Mobile Navigation Drawer -->
+  <!-- ========================================================================= -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l border-slate-200 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-9 w-auto object-contain">
+        </a>
+        <button id="closeMobileMenuBtn" type="button" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-2 text-sm">
+        <a href="index.html" class="mobile-nav-link p-3 rounded-xl bg-cyan-50 text-cyan-700 font-bold border border-cyan-200">Home</a>
+        <a href="about.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">About Us</a>
+        <a href="services.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Services</a>
+        <a href="products.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Products</a>
+        <a href="gallery.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Gallery</a>
+        <a href="testimonials.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Client Reviews</a>
+        <a href="news.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Milestones &amp; News</a>
+        <a href="team.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Team</a>
+        <a href="contact.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <div class="flex items-center justify-center space-x-4 py-2 text-slate-500">
+        <a href="https://www.facebook.com/nayelsolutions/" target="_blank" class="hover:text-cyan-600"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/SolutionsNayel" target="_blank" class="hover:text-cyan-600"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="hover:text-cyan-600"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/nayelsolutions/?hl=en" target="_blank" class="hover:text-cyan-600"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="tel:+923278564834" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 text-sm font-semibold hover:bg-slate-200">
+        <i class="fa-solid fa-phone text-cyan-600"></i> +92 327 8564834
+      </a>
+      <a href="contact.html" class="mobile-nav-link w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-indigo-600 text-white text-sm font-semibold shadow-md">
+        <span>Request a Proposal</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION (Ultra-Clean Corporate Light with High-Tech Video & Dynamic Mesh) -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative min-h-[92vh] lg:min-h-screen flex items-center pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 overflow-hidden bg-slate-100 border-b border-slate-200 hero-interactive-section">
+    <!-- High-Tech Background Video & Overlay Stack -->
+    <div class="hero-bg-wrapper absolute inset-0 pointer-events-none overflow-hidden select-none z-0" id="heroBgWrapper">
+      
+      <!-- High-Tech Background Video Layer with Parallax -->
+      <div class="hero-bg-parallax-layer absolute w-[114%] h-[114%] -top-[7%] -left-[7%] transform-gpu will-change-transform" id="heroParallaxLayer">
+        <video 
+          id="heroBgVideo" 
+          class="w-full h-full object-cover object-center opacity-60 sm:opacity-65 filter contrast-125 saturate-125 transition-opacity duration-700" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto"
+          poster="images/blue technology background pc 8k wallpaper.jpg">
+          <source src="images/hero-tech-bg.mp4" type="video/mp4">
+          <source src="images/landing-tech-video.mp4" type="video/mp4">
+          <!-- Fallback Image if Video Unsupported -->
+          <img 
+            id="heroBgImage" 
+            src="images/blue technology background pc 8k wallpaper.jpg" 
+            alt="Nayel Solutions Technology Background" 
+            class="w-full h-full object-cover object-center opacity-25" 
+            loading="eager"
+          />
+        </video>
+      </div>
+
+      <!-- Cyber Grid Overlay -->
+      <div class="hero-cyber-grid absolute inset-0 opacity-15 pointer-events-none z-10"></div>
+
+      <!-- Interactive Tech Particles Canvas -->
+      <canvas id="heroCanvas" class="hero-particle-canvas absolute inset-0 w-full h-full pointer-events-auto z-10 opacity-50"></canvas>
+
+      <!-- Dynamic Interactive Mouse Spotlight Glow -->
+      <div id="heroCursorLight" class="hero-cursor-light absolute inset-0 pointer-events-none z-10"></div>
+
+      <!-- Clean Light Gradient Blends for High Readability & Contrast -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/55 to-[#f8fafc] z-10 pointer-events-none"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+        
+        <!-- Left Hero Text & CTA -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6 sm:space-y-7 reveal-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/90 border border-slate-200 shadow-sm backdrop-blur-md">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-600 animate-pulse"></span>
+            <span class="text-[11px] sm:text-xs md:text-sm font-bold tracking-wider uppercase text-cyan-800">
+              SOFTWARE · AI · ERP · CLOUD · HARDWARE LAB
+            </span>
+          </div>
+
+          <h1 class="font-heading font-black text-3xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.12] text-slate-900 break-words">
+            Innovative Tech <br class="hidden sm:inline" />
+            <span class="text-gradient-multi">Experts &amp; Software</span> <br />
+            <span class="text-cyan-600">Development</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            We engineer high-performance bespoke software, autonomous AI solutions, multi-tenant enterprise ERPs, and custom hardware simulators for high-growth global organizations.
+          </p>
+
+          <!-- Action Buttons (Full-Width Responsive on Mobile, Inline on Desktop) -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+            <a href="services.html" class="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 group">
+              <span>Explore 12 Services</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <a href="products.html" class="w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:border-cyan-500 hover:text-cyan-700 shadow-xs hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-cube text-cyan-600"></i>
+              <span>In-House Products</span>
+            </a>
+
+            <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="w-full sm:w-auto px-5 py-3.5 sm:py-4 rounded-full text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2" title="Instant WhatsApp Consultation">
+              <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+              <span>Quick WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Row -->
+          <div class="pt-2 sm:pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> 100% Strict NDA Protection</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-cyan-600"></i> 24-Hour Scope Turnaround</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-indigo-600"></i> SLA 99.9% Uptime</span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive 3D Showcase Card with Floating Interactive Badges -->
+        <div class="lg:col-span-5 reveal-right relative w-full max-w-lg mx-auto lg:max-w-none">
+          
+          <!-- Floating Badge 1: Top Right (Hidden on mobile to avoid overflow) -->
+          <div class="hidden md:flex absolute -top-4 -right-4 px-3.5 py-1.5 rounded-full bg-white/95 border border-cyan-300 shadow-lg shadow-cyan-500/15 items-center gap-2 text-xs font-bold text-cyan-800 animate-float-1 z-30 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <i class="fa-solid fa-bolt text-amber-500"></i>
+            <span>Continuous 60FPS Delivery</span>
+          </div>
+
+          <!-- Floating Badge 2: Bottom Left (Hidden on mobile to avoid overflow) -->
+          <div class="hidden md:flex absolute -bottom-4 -left-4 px-3.5 py-1.5 rounded-full bg-white/95 border border-indigo-300 shadow-lg shadow-indigo-500/15 items-center gap-2 text-xs font-bold text-indigo-800 animate-float-2 z-30 backdrop-blur-md">
+            <i class="fa-solid fa-shield-halved text-cyan-600"></i>
+            <span>Enterprise SLA 99.9%</span>
+          </div>
+
+          <div class="glass-card-light p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl space-y-5 sm:space-y-6 shadow-xl border-slate-200 relative overflow-hidden tilt-card w-full">
+            
+            <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-slate-100">
+              <div class="flex items-center gap-2.5 sm:gap-3">
+                <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500 animate-pulse"></div>
+                <span class="font-heading font-bold text-xs sm:text-sm text-slate-900">Nayel Core Cloud Engine</span>
+              </div>
+              <span class="text-[10px] font-bold text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded-full border border-cyan-200">v4.8 Live</span>
+            </div>
+
+            <div class="space-y-3 sm:space-y-4">
+              <!-- Live Metric 1 -->
+              <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Global Cloud Deployments</p>
+                  <p class="font-heading font-black text-xl sm:text-2xl text-slate-900 mt-0.5">35+ Enterprises</p>
+                </div>
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center text-sm sm:text-base">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+              </div>
+
+              <!-- Live Metric 2 -->
+              <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] sm:text-xs text-slate-500 font-medium">Client Satisfaction Score</p>
+                  <p class="font-heading font-black text-xl sm:text-2xl text-indigo-600 mt-0.5">5.0 / 5.0 Rating</p>
+                </div>
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm sm:text-base">
+                  <i class="fa-solid fa-star text-amber-500"></i>
+                </div>
+              </div>
+
+              <!-- Tech Modules List -->
+              <div class="pt-1 sm:pt-2">
+                <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Active Engineering Stacks</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">ASP.NET Core</span>
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">React &amp; Next.js</span>
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">Flutter Mobile</span>
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">PyTorch AI</span>
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">PostgreSQL</span>
+                  <span class="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">AWS DevOps</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pt-3 sm:pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-600"></i> ISO Compliant Code</span>
+              <a href="contact.html" class="text-cyan-700 font-bold hover:underline">Get Architecture Scope &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TRUST METRICS & IMPACT COUNTERS -->
+  <!-- ========================================================================= -->
+  <section class="py-12 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center stagger-parent">
+        
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-cyan-600">35+</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Enterprise Systems</p>
+          <p class="text-xs text-slate-500">Global Implementations</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="100">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-indigo-600">25+</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Completed Projects</p>
+          <p class="text-xs text-slate-500">USA, KSA, PK, UAE</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="200">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-blue-600">99.9%</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Cloud SLA Uptime</p>
+          <p class="text-xs text-slate-500">Mission-Critical Systems</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-2xl tilt-card reveal-up" data-delay="300">
+          <p class="font-heading font-black text-3xl sm:text-4xl text-emerald-600">24/7</p>
+          <p class="text-xs font-bold text-slate-900 mt-2 mb-0.5">Dedicated Support</p>
+          <p class="text-xs text-slate-500">Zero-Downtime Guarantee</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTINUOUS MOVING TECH STACK MARQUEE (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-4 bg-white border-b border-slate-200 relative z-20 overflow-hidden shadow-xs">
+    <div class="marquee-container">
+      <div class="marquee-track-tech">
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-microsoft text-blue-600 text-base"></i><span>.NET Core / C#</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-react text-cyan-600 text-base"></i><span>React &amp; Next.js</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-angular text-red-600 text-base"></i><span>Angular Enterprise</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-python text-amber-600 text-base"></i><span>Python &amp; PyTorch AI</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-flutter text-sky-600 text-base"></i><span>Flutter &amp; Dart</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-aws text-orange-600 text-base"></i><span>AWS Cloud Infra</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-database text-indigo-600 text-base"></i><span>PostgreSQL &amp; MSSQL</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-docker text-blue-600 text-base"></i><span>Docker &amp; Kubernetes</span></div>
+
+        <!-- Seamless Duplicate Loop -->
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-microsoft text-blue-600 text-base"></i><span>.NET Core / C#</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-react text-cyan-600 text-base"></i><span>React &amp; Next.js</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-angular text-red-600 text-base"></i><span>Angular Enterprise</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-python text-amber-600 text-base"></i><span>Python &amp; PyTorch AI</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-flutter text-sky-600 text-base"></i><span>Flutter &amp; Dart</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-aws text-orange-600 text-base"></i><span>AWS Cloud Infra</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-database text-indigo-600 text-base"></i><span>PostgreSQL &amp; MSSQL</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-docker text-blue-600 text-base"></i><span>Docker &amp; Kubernetes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DUAL-MODE 12 SERVICES STREAM & 3-IN-A-ROW 3D TILT GRID -->
+  <!-- ========================================================================= -->
+  <section id="services-showcase" class="py-20 relative bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Section Header & Dual-Mode Filter Tabs -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-cubes"></i> COMPLETE 12 IT COMPETENCIES
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight">
+          Comprehensive Engineering <br class="hidden sm:inline" />
+          <span class="text-gradient-multi">&amp; Technology Services</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Full-cycle enterprise software development, intelligent cloud architectures, autonomous AI models, and custom hardware engineering.
+        </p>
+
+        <!-- Category Selector Pills (Dual-Mode Controller) -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 pt-4">
+          <button type="button" data-service-filter="all" class="service-tab-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white shadow-md shadow-cyan-500/20 border-transparent">
+            All 12 Services (Continuous Stream)
+          </button>
+          <button type="button" data-service-filter="software" class="service-tab-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-cyan-500 hover:text-cyan-600 shadow-xs">
+            Software &amp; Web
+          </button>
+          <button type="button" data-service-filter="mobile" class="service-tab-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-indigo-500 hover:text-indigo-600 shadow-xs">
+            Mobile &amp; Cloud
+          </button>
+          <button type="button" data-service-filter="ai" class="service-tab-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-purple-500 hover:text-purple-600 shadow-xs">
+            AI &amp; Automation
+          </button>
+          <button type="button" data-service-filter="hardware" class="service-tab-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-700 border border-slate-200 hover:border-amber-500 hover:text-amber-600 shadow-xs">
+            Hardware &amp; IoT Lab
+          </button>
+        </div>
+      </div>
+
+      <!-- Mode 1: Continuous Moving Dual-Row Marquee Stream (Visible when "All" is active) -->
+      <div id="servicesMarqueeWrapper" class="space-y-6">
+        
+        <!-- Stream Row 1: Left Scroll (Services 01 to 06) -->
+        <div class="marquee-container">
+          <div class="marquee-track-left">
+            
+            <!-- Service 1: Cloud Computing -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/cloud-computing.png" alt="Cloud Computing Development" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-cyan-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-cyan-200 shadow-xs">01 / Cloud</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Cloud Computing Development</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Cloud Native Mobile and Web apps enabling auto-scaling and high-speed computing.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">AWS · Azure · GCP</span>
+                  <a href="contact.html" class="text-cyan-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2: Website Development -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/WEBSITE-DEVELOPMENT.png" alt="Website Development" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-blue-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-blue-200 shadow-xs">02 / Web</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Website &amp; Web Portals</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Custom responsive portals, enterprise web apps, and modern Next.js platforms.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Next.js · ASP.NET</span>
+                  <a href="contact.html" class="text-blue-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3: Graphic Designing -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/GRAPHICS-DESIGNING.png" alt="Graphic Designing" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-pink-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-pink-200 shadow-xs">03 / UI/UX</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Graphic Designing &amp; UI/UX</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Captivating user experiences, design systems, illustrations, and brand assets.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Figma · Adobe CC</span>
+                  <a href="contact.html" class="text-pink-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 4: Brand Creation -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/company-brand-creation.png" alt="Company Brand Creation" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-purple-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-purple-200 shadow-xs">04 / Brand</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Company Brand Creation</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    360° corporate identity, trademarking guidance, stationery, and launch roadmap.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Identity · Launch</span>
+                  <a href="contact.html" class="text-purple-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 5: Digital Marketing -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/digital-marketing.png" alt="Digital Marketing" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-emerald-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-emerald-200 shadow-xs">05 / Growth</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Digital Marketing &amp; SEO</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Data-driven organic search ranking, Google Ads campaigns, and social conversions.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">SEO · Meta · PPC</span>
+                  <a href="contact.html" class="text-emerald-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 6: Mobile Apps -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/mobile-apllicaiton-devevlopemt.png" alt="Mobile Application Development" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-cyan-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-cyan-200 shadow-xs">06 / Mobile</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Mobile Applications</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Buttery-smooth iOS and Android apps with real-time cloud sync and push alerts.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Flutter · Swift · React</span>
+                  <a href="contact.html" class="text-cyan-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seamless Duplicate Loop (Services 01 to 06) -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/cloud-computing.png" alt="Cloud Computing Development" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-cyan-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-cyan-200 shadow-xs">01 / Cloud</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Cloud Computing Development</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Cloud Native Mobile and Web apps enabling auto-scaling and high-speed computing.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">AWS · Azure · GCP</span>
+                  <a href="contact.html" class="text-cyan-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/WEBSITE-DEVELOPMENT.png" alt="Website Development" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-blue-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-blue-200 shadow-xs">02 / Web</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Website &amp; Web Portals</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Custom responsive portals, enterprise web apps, and modern Next.js platforms.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Next.js · ASP.NET</span>
+                  <a href="contact.html" class="text-blue-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Stream Row 2: Right Scroll (Services 07 to 12) -->
+        <div class="marquee-container">
+          <div class="marquee-track-right">
+            
+            <!-- Service 7: Simulators -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/simulators.png" alt="Electronic Simulators" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-amber-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-amber-200 shadow-xs">07 / Hardware</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Electronic Simulators</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Industrial training simulators, defense testbeds, and flight simulation cockpits.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Embedded C++ · Rigs</span>
+                  <a href="contact.html" class="text-amber-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 8: Integrated Solutions -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/integrated-solutions.png" alt="Integrated Solutions" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-indigo-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-indigo-200 shadow-xs">08 / Integrated</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Integrated Solutions</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Cross-disciplinary electronics, mechanical CAD, firmware, and cloud telemetry.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Turnkey · SCADA</span>
+                  <a href="contact.html" class="text-indigo-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 9: Electronic Circuits Design -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/ELECTRONIC-CIRCUIT-DESIGNS.png" alt="Electronic Circuits Design" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-rose-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-rose-200 shadow-xs">09 / PCB Lab</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Electronic Circuits Design</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Multi-layer high-speed PCB layouts, FPGA boards, and signal integrity testing.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Altium · STM32 · FPGA</span>
+                  <a href="contact.html" class="text-rose-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 10: AI and IoT -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/ARTIFICAL-INTELLEGNECE.png" alt="Artificial Intelligence and IoT" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-cyan-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-cyan-200 shadow-xs">10 / AI &amp; IoT</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">AI &amp; Smart IoT Sensors</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Custom computer vision inspection, neural networks, and remote telemetry.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">PyTorch · TensorRT</span>
+                  <a href="contact.html" class="text-cyan-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 11: Industrial Automation -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/INDUSTRIAL.png" alt="Industrial Automation" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-purple-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-purple-200 shadow-xs">11 / Factory 4.0</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Industrial Automation</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Smart factory automation, PLC programming (Siemens, Allen-Bradley), and SCADA.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Siemens PLC · Modbus</span>
+                  <a href="contact.html" class="text-purple-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 12: Home Automation -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/HOME.png" alt="Home Automation" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-pink-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-pink-200 shadow-xs">12 / Smart Living</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Home Automation</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Centralized smart home control: HVAC climate, facial entry, and mobile energy metrics.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Matter · Zigbee · MQTT</span>
+                  <a href="contact.html" class="text-pink-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seamless Duplicate Loop (Services 07 to 12) -->
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/simulators.png" alt="Electronic Simulators" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-amber-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-amber-200 shadow-xs">07 / Hardware</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Electronic Simulators</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Industrial training simulators, defense testbeds, and flight simulation cockpits.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Embedded C++ · Rigs</span>
+                  <a href="contact.html" class="text-amber-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="marquee-service-card tilt-card">
+              <div class="service-cover-full">
+                <img src="images/services/integrated-solutions.png" alt="Integrated Solutions" loading="lazy">
+                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase text-indigo-800 bg-white/95 px-2.5 py-0.5 rounded-full border border-indigo-200 shadow-xs">08 / Integrated</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-grow space-y-2.5">
+                <div>
+                  <h3 class="font-heading font-bold text-base text-slate-900">Integrated Solutions</h3>
+                  <p class="text-xs text-slate-600 line-clamp-2 mt-1">
+                    Cross-disciplinary electronics, mechanical CAD, firmware, and cloud telemetry.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-medium">Turnkey · SCADA</span>
+                  <a href="contact.html" class="text-indigo-700 font-bold hover:underline flex items-center gap-1">Inquire &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mode 2: 3-in-a-Row (3x3) Interactive 3D Tilt Grid (Shown when a specific category is clicked) -->
+      <div id="servicesGridView" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Cloud Computing Development -->
+        <div data-category="software" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-cyan-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/cloud-computing.png" alt="Cloud Computing Development" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-cyan-200 shadow-sm">Cloud Infrastructure</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">01 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-cyan-600 transition-colors">Cloud Computing Development</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Expertise in Cloud Native Mobile and Web apps. Cloud-based computing solutions enable worldwide data access, auto-scaling, and high-speed computing for complex algorithms and applications.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-cyan-600 group-hover:text-cyan-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">AWS · Azure · GCP</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 2. Web Development -->
+        <div data-category="software" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-blue-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/WEBSITE-DEVELOPMENT.png" alt="Web Development" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-blue-200 shadow-sm">Full-Stack Portals</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">02 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-blue-600 transition-colors">Web Development</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Our team of web developers helps your business stand out in the digital marketplace by building custom, brilliantly designed, lightning-fast, and responsive web portals tailored to your goals.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-blue-600 group-hover:text-blue-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">React · ASP.NET · Node</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 3. Graphic Designing -->
+        <div data-category="growth" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-pink-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/GRAPHICS-DESIGNING.png" alt="Graphic Designing" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-pink-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-pink-200 shadow-sm">Creative UI/UX</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">03 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-pink-600 transition-colors">Graphic Designing</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Our design team helps you enhance brand identity and user experience with captivating UI/UX mockups, design systems, illustrations, and complete corporate identity stationery.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-pink-600 group-hover:text-pink-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Figma · Adobe CC</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 4. Company Brand Creation -->
+        <div data-category="growth" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-purple-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/company-brand-creation.png" alt="Company Brand Creation" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-purple-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-purple-200 shadow-sm">Identity &amp; Launch</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">04 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-purple-600 transition-colors">Company Brand Creation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Complete brand creation and corporate launch solutions i.e. company registration guidance, trademarking, logo design, stationery, website design, and marketing setup.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-purple-600 group-hover:text-purple-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">360° Branding</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 5. Digital Marketing -->
+        <div data-category="growth" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-emerald-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/digital-marketing.png" alt="Digital Marketing" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-emerald-200 shadow-sm">Growth &amp; Reach</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">05 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-emerald-600 transition-colors">Digital Marketing</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Strategic organic and paid campaigns that accelerate conversion. Search Engine Optimization (SEO), Social Media Marketing (SMM), Google Ads, and content marketing tailored to generate high-intent leads.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-emerald-600 group-hover:text-emerald-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">SEO · SEM · Meta Ads</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 6. Mobile Application Development -->
+        <div data-category="mobile" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-cyan-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/mobile-apllicaiton-devevlopemt.png" alt="Mobile Application Development" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-cyan-200 shadow-sm">iOS &amp; Android</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">06 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-cyan-600 transition-colors">Mobile Applications</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Native and cross-platform mobile apps for iOS and Android. High-speed Flutter and React Native architectures with real-time cloud synchronisation, push notifications, and offline data caching.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-cyan-600 group-hover:text-cyan-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Flutter · iOS · Android</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 7. Simulators -->
+        <div data-category="hardware" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-amber-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/simulators.png" alt="Electronic Simulators" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-amber-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-amber-200 shadow-sm">Hardware Engineering</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">07 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-amber-600 transition-colors">Electronic Simulators</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Design and manufacturing of industrial training simulators, defense equipment rigs, flight &amp; vehicle simulation cockpits, and real-time hardware-in-the-loop embedded systems.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-amber-600 group-hover:text-amber-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Real-Time Simulation</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 8. Integrated Solutions -->
+        <div data-category="hardware" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-indigo-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/integrated-solutions.png" alt="Integrated Solutions" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-indigo-200 shadow-sm">Turnkey Tech</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">08 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-indigo-600 transition-colors">Integrated Solutions</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Cross-disciplinary engineering integrating custom electronics, mechanical CAD, firmware, and cloud dashboards for end-to-end commercial solutions.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-indigo-600 group-hover:text-indigo-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Turnkey Solutions</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 9. Electronic Circuits Design -->
+        <div data-category="hardware" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-rose-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/ELECTRONIC-CIRCUIT-DESIGNS.png" alt="Electronic Circuits Design" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-rose-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-rose-200 shadow-sm">PCB &amp; Embedded</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">09 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-rose-600 transition-colors">Electronic Circuits Design</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Custom electronic system design services ensure your FPGA and microprocessor-based high-speed board designs, production prototyping, and rigorous signal testing.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-rose-600 group-hover:text-rose-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">FPGA · Microcontrollers</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 10. Artificial Intelligence and IoT -->
+        <div data-category="ai" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-cyan-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/ARTIFICAL-INTELLEGNECE.png" alt="Artificial Intelligence and IoT" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-cyan-200 shadow-sm">AI &amp; Smart Sensors</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">10 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-cyan-600 transition-colors">Artificial Intelligence &amp; IoT</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  A vast range of AI applications from data gathering to model training for businesses. We also provide IoT solutions for remote control, security, video transmission, and telemetry.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-cyan-600 group-hover:text-cyan-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Deep Learning · Edge IoT</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 11. Industrial Automation -->
+        <div data-category="ai" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-purple-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/INDUSTRIAL.png" alt="Industrial Automation" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-purple-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-purple-200 shadow-sm">SCADA &amp; Industry 4.0</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">11 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-purple-600 transition-colors">Industrial Automation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Conventional and modern industrial automation solutions to control industrial plants and machines with real-time data monitoring, no matter how harsh and spread the environment is.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-purple-600 group-hover:text-purple-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">PLC · SCADA · Sensors</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+        <!-- 12. Home Automation -->
+        <div data-category="ai" class="service-card-item tilt-card group bg-white border border-slate-200/80 rounded-3xl shadow-lg hover:shadow-2xl hover:border-pink-400 transition-all duration-300">
+          <div class="tilt-inner flex flex-col justify-between h-full relative z-10 overflow-hidden rounded-[24px]">
+            <div class="service-card-cover-light">
+              <img src="images/services/HOME.png" alt="Home Automation" loading="lazy">
+              <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                <span class="text-[10px] font-bold text-pink-700 uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 border border-pink-200 shadow-sm">Smart Living &amp; IoT</span>
+              </div>
+              <span class="absolute top-3.5 right-3.5 text-[11px] text-slate-600 font-semibold px-2.5 py-1 rounded-lg bg-white/95 border border-slate-200 shadow-sm">12 / 12</span>
+            </div>
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2.5 group-hover:text-pink-600 transition-colors">Home Automation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Control devices and secure your home at your fingertips with a single tap using your mobile phone. Control energy, monitoring, lighting, and billing status in real time.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <a href="contact.html" class="text-xs font-semibold text-pink-600 group-hover:text-pink-700 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                  <span>Inquire Service</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <span class="text-[11px] text-slate-500 font-medium">Smart Home · Mobile App</span>
+              </div>
+            </div>
+          </div>
+          <div class="tilt-glare"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE PROJECT SCOPE & TIMELINE ESTIMATOR (High-Engagement Widget) -->
+  <!-- ========================================================================= -->
+  <section id="estimator-section" class="py-20 relative bg-gradient-to-b from-white via-slate-50 to-white border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-calculator"></i> Interactive Scope Calculator
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900">
+          Instant Project Architecture <br class="hidden sm:inline" />
+          <span class="text-gradient-multi">&amp; Timeline Estimator</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Select your required technology stack, scale, and budget range to dynamically calculate development sprints, engineering team structure, and recommended cloud architecture.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls Column (Left) -->
+        <div class="lg:col-span-7 glass-card-light p-6 sm:p-8 rounded-3xl space-y-8 shadow-lg border-slate-200 reveal-left">
+          
+          <!-- 1. Choose Service Domain -->
+          <div class="space-y-3">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-[10px] font-black">1</span>
+              <span>Select Service Discipline</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <button type="button" data-service-name="ERP / Cloud Web System" class="estimator-service-pill px-4 py-3 rounded-2xl text-xs font-semibold text-left border border-transparent bg-cyan-600 text-white shadow-sm transition-all duration-200 flex items-center justify-between">
+                <span>ERP &amp; Cloud Web App</span>
+                <i class="fa-solid fa-check text-xs"></i>
+              </button>
+              <button type="button" data-service-name="Mobile iOS &amp; Android App" class="estimator-service-pill px-4 py-3 rounded-2xl text-xs font-semibold text-left border border-slate-200 bg-white text-slate-700 hover:border-cyan-400 hover:text-cyan-700 transition-all duration-200 flex items-center justify-between">
+                <span>Mobile iOS &amp; Android App</span>
+                <i class="fa-solid fa-mobile-screen text-xs opacity-60"></i>
+              </button>
+              <button type="button" data-service-name="AI &amp; Automation Pipeline" class="estimator-service-pill px-4 py-3 rounded-2xl text-xs font-semibold text-left border border-slate-200 bg-white text-slate-700 hover:border-cyan-400 hover:text-cyan-700 transition-all duration-200 flex items-center justify-between">
+                <span>AI &amp; Smart Sensors (IoT)</span>
+                <i class="fa-solid fa-brain text-xs opacity-60"></i>
+              </button>
+              <button type="button" data-service-name="Hardware Simulator &amp; Lab Rig" class="estimator-service-pill px-4 py-3 rounded-2xl text-xs font-semibold text-left border border-slate-200 bg-white text-slate-700 hover:border-cyan-400 hover:text-cyan-700 transition-all duration-200 flex items-center justify-between">
+                <span>Hardware Simulators &amp; Rigs</span>
+                <i class="fa-solid fa-microchip text-xs opacity-60"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Choose Scale Tier -->
+          <div class="space-y-3">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-black">2</span>
+              <span>Project Scale &amp; Complexity</span>
+            </label>
+            <div class="grid grid-cols-3 gap-2.5">
+              <button type="button" data-scale-name="Startup MVP" class="estimator-scale-pill px-3 py-2.5 rounded-2xl text-xs font-semibold text-center border border-slate-200 bg-white text-slate-700 hover:border-indigo-400 transition-all duration-200">
+                Startup MVP
+              </button>
+              <button type="button" data-scale-name="Growth Scale" class="estimator-scale-pill px-3 py-2.5 rounded-2xl text-xs font-semibold text-center border border-transparent bg-indigo-600 text-white shadow-sm transition-all duration-200">
+                Growth Scale
+              </button>
+              <button type="button" data-scale-name="Enterprise Ecosystem" class="estimator-scale-pill px-3 py-2.5 rounded-2xl text-xs font-semibold text-center border border-slate-200 bg-white text-slate-700 hover:border-indigo-400 transition-all duration-200">
+                Enterprise Ecosystem
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Target Budget Slider -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px] font-black">3</span>
+                <span>Target Project Investment Range</span>
+              </label>
+              <span id="estimatorBudgetValue" class="text-sm font-black text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">$12,000</span>
+            </div>
+            <input id="estimatorSlider" type="range" min="3000" max="60000" step="1000" value="12000" class="range-slider-cyan">
+            <div class="flex justify-between text-[11px] text-slate-400 font-medium">
+              <span>$3,000 (MVP)</span>
+              <span>$25,000 (Full Platform)</span>
+              <span>$60,000+ (Global Enterprise)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Output Card (Right) -->
+        <div class="lg:col-span-5 glass-card-light p-6 sm:p-8 rounded-3xl space-y-6 shadow-xl border-cyan-200 bg-gradient-to-br from-white via-cyan-50/20 to-indigo-50/20 relative overflow-hidden tilt-card reveal-right">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-200/80">
+            <div>
+              <span class="text-[10px] font-black uppercase text-cyan-700 tracking-wider">Live Architecture Calculation</span>
+              <h3 class="font-heading font-black text-xl text-slate-900 mt-0.5">Estimated Engineering Plan</h3>
+            </div>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+          </div>
+
+          <div class="space-y-4">
+            
+            <div class="p-4 rounded-2xl bg-white/90 border border-slate-200 shadow-xs space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Sprint Velocity &amp; Duration</span>
+              <p id="estimatorSprints" class="font-heading font-bold text-base text-cyan-800">4 - 6 Sprints (~8-12 Weeks)</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/90 border border-slate-200 shadow-xs space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Recommended Technology Stack</span>
+              <p id="estimatorTechStack" class="font-heading font-semibold text-xs text-indigo-900 leading-relaxed">ASP.NET Core · Next.js · PostgreSQL · Docker · AWS</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/90 border border-slate-200 shadow-xs space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Allocated Dedicated Team</span>
+              <p id="estimatorTeam" class="font-heading font-medium text-xs text-slate-700 leading-relaxed">1 Solutions Architect, 2 Fullstack Devs, 1 QA Lead</p>
+            </div>
+
+          </div>
+
+          <div class="pt-2">
+            <a id="estimatorWhatsAppBtn" href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20used%20your%20Project%20Estimator%20and%20want%20to%20discuss%20my%20architecture" target="_blank" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Discuss This Scope on WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- IN-HOUSE ENTERPRISE PRODUCTS SHOWCASE -->
+  <!-- ========================================================================= -->
+  <section id="products-showcase" class="py-20 relative bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold uppercase tracking-wider">Enterprise In-House Platforms</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900">Proprietary Software Systems</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Turnkey, battle-tested software suites ready for white-label or enterprise deployment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-parent">
+        
+        <!-- Product 1: ERP OnClick -->
+        <div class="glass-card-light p-6 rounded-3xl flex flex-col justify-between tilt-card reveal-up">
+          <div class="space-y-4">
+            <div class="w-full h-40 rounded-2xl overflow-hidden">
+              <img src="images/projects/erponclick-core-dashboard.jpg" alt="ERP OnClick" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded-full border border-cyan-200 uppercase">Enterprise Core</span>
+            <h3 class="font-heading font-bold text-xl text-slate-900">ERP OnClick</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Complete automated multi-company accounting, tax ledgers, payroll, and warehouse inventory reconciliation.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-900">Multi-Entity Sync</span>
+            <a href="products.html" class="text-xs font-bold text-cyan-700 hover:underline">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Product 2: Academy LMS -->
+        <div class="glass-card-light p-6 rounded-3xl flex flex-col justify-between tilt-card reveal-up" data-delay="100">
+          <div class="space-y-4">
+            <div class="w-full h-40 rounded-2xl overflow-hidden">
+              <img src="images/projects/lms-academy-dashboard.jpg" alt="Nayel Academy LMS" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200 uppercase">EdTech Suite</span>
+            <h3 class="font-heading font-bold text-xl text-slate-900">Nayel Academy LMS</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Virtual classrooms, automated exam builder, online fee processing, and instant WhatsApp notifications.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-900">15,000+ Students</span>
+            <a href="products.html" class="text-xs font-bold text-purple-700 hover:underline">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Product 3: Hospital HMS -->
+        <div class="glass-card-light p-6 rounded-3xl flex flex-col justify-between tilt-card reveal-up" data-delay="200">
+          <div class="space-y-4">
+            <div class="w-full h-40 rounded-2xl overflow-hidden">
+              <img src="images/projects/healthcare-hms-suite.jpg" alt="Hospital HMS" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200 uppercase">HealthTech</span>
+            <h3 class="font-heading font-bold text-xl text-slate-900">Hospital HMS Suite</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Electronic medical records (EMR), live OPD tokens, pharmacy stock alerts, and multi-doctor schedule queues.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-900">HIPAA Compliant</span>
+            <a href="products.html" class="text-xs font-bold text-blue-700 hover:underline">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Product 4: AI Budgeting -->
+        <div class="glass-card-light p-6 rounded-3xl flex flex-col justify-between tilt-card reveal-up" data-delay="300">
+          <div class="space-y-4">
+            <div class="w-full h-40 rounded-2xl overflow-hidden">
+              <img src="images/projects/corporate-budgeting-forecast.jpg" alt="AI Budgeting" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 uppercase">FinTech AI</span>
+            <h3 class="font-heading font-bold text-xl text-slate-900">AI Budgeting Engine</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Automated corporate Capex/Opex forecasting, departmental cost center allocations, and ledger sync.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-900">Predictive ML</span>
+            <a href="products.html" class="text-xs font-bold text-emerald-700 hover:underline">Explore &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DUAL TRACK CONTINUOUS LIVE SCREENSHOTS MARQUEE (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-16 bg-slate-50/50 border-t border-b border-slate-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center space-y-2 reveal-up">
+      <span class="px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">Live System Captures</span>
+      <h2 class="font-heading font-black text-2xl sm:text-3xl text-slate-900">Continuous Production Streams</h2>
+      <p class="text-xs sm:text-sm text-slate-600">Click on any live screenshot to view high-definition modal zoom.</p>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Track 1: Moving Left -->
+      <div class="marquee-container">
+        <div class="marquee-track-left">
+          
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/Dr.samavia.png" data-caption="Dr. Samavia Clinic - Hospital Management System">
+            <img src="images/projects/Dr.samavia.png" alt="Dr. Samavia HMS" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">HealthTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Dr. Samavia Clinic HMS</h5>
+              <p class="text-[10px] text-slate-200">Complete Hospital System</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/1.jpg" data-caption="University of Business &amp; Technology - CMS Portal">
+            <img src="images/projects/1.jpg" alt="UBT CMS Portal" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-purple-300">EdTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">UBT Institute CMS</h5>
+              <p class="text-[10px] text-slate-200">University Management</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/hospital-hms-dashboard.jpg" data-caption="Nayel Hospital HMS - Full Diagnostic EHR">
+            <img src="images/projects/hospital-hms-dashboard.jpg" alt="Hospital HMS" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-emerald-300">Healthcare</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Hospital HMS</h5>
+              <p class="text-[10px] text-slate-200">EHR, Pharmacy &amp; Wards</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/budgeting.jpg" data-caption="Help Center Al Juffali Group - Corporate Budgeting System">
+            <img src="images/projects/budgeting.jpg" alt="Budgeting System" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-emerald-300">FinTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Al Juffali Budgeting</h5>
+              <p class="text-[10px] text-slate-200">Cost Center Finance</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/2.jpg" data-caption="ERP Financial Ledger &amp; Multi-Company Accounts">
+            <img src="images/projects/2.jpg" alt="ERP Financials" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">ERP Suite</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">ERP Accounts &amp; Ledger</h5>
+              <p class="text-[10px] text-slate-200">Multi-Company Financials</p>
+            </div>
+          </div>
+
+          <!-- Seamless Loop -->
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/Dr.samavia.png" data-caption="Dr. Samavia Clinic - Hospital Management System">
+            <img src="images/projects/Dr.samavia.png" alt="Dr. Samavia HMS" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">HealthTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Dr. Samavia Clinic HMS</h5>
+              <p class="text-[10px] text-slate-200">Complete Hospital System</p>
+            </div>
+          </div>
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/1.jpg" data-caption="University of Business &amp; Technology - CMS Portal">
+            <img src="images/projects/1.jpg" alt="UBT CMS Portal" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-purple-300">EdTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">UBT Institute CMS</h5>
+              <p class="text-[10px] text-slate-200">University Management</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Track 2: Moving Right -->
+      <div class="marquee-container">
+        <div class="marquee-track-right">
+          
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/nayel-mobile-suite.jpg" data-caption="Nayel Mobile Suite - iOS &amp; Android Apps">
+            <img src="images/projects/nayel-mobile-suite.jpg" alt="Nayel Mobile Suite" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-pink-300">Mobile Apps</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Mobile Suite</h5>
+              <p class="text-[10px] text-slate-200">Cross-Platform Sync</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/project-10-f.jpg" data-caption="Supply Chain &amp; Procurement Automation">
+            <img src="images/projects/project-10-f.jpg" alt="Supply Chain Module" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">Logistics</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Procurement &amp; Supply</h5>
+              <p class="text-[10px] text-slate-200">Vendor Automation</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/project-12-f.jpg" data-caption="Hospital Doctor Appointments &amp; Consultation Queue">
+            <img src="images/projects/project-12-f.jpg" alt="Doctor Appointments" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-blue-300">HealthTech</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Doctor Queue &amp; EMR</h5>
+              <p class="text-[10px] text-slate-200">Appointment Management</p>
+            </div>
+          </div>
+
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/project-7-f.jpg" data-caption="Payroll &amp; HR Management Dashboard">
+            <img src="images/projects/project-7-f.jpg" alt="HR Payroll Dashboard" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">HR / Payroll</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">HR &amp; Payroll Automation</h5>
+              <p class="text-[10px] text-slate-200">Tax, Leave &amp; Gratuity</p>
+            </div>
+          </div>
+
+          <!-- Seamless Loop -->
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/nayel-mobile-suite.jpg" data-caption="Nayel Mobile Suite - iOS &amp; Android Apps">
+            <img src="images/projects/nayel-mobile-suite.jpg" alt="Nayel Mobile Suite" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-pink-300">Mobile Apps</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Mobile Suite</h5>
+              <p class="text-[10px] text-slate-200">Cross-Platform Sync</p>
+            </div>
+          </div>
+          <div class="marquee-card-light gallery-thumb-card group open-lightbox-btn cursor-pointer" data-src="images/projects/project-10-f.jpg" data-caption="Supply Chain &amp; Procurement Automation">
+            <img src="images/projects/project-10-f.jpg" alt="Supply Chain Module" class="gallery-thumb-img h-44 w-full object-cover">
+            <div class="gallery-overlay">
+              <span class="text-[9px] font-bold uppercase text-cyan-300">Logistics</span>
+              <h5 class="font-heading font-bold text-xs text-white truncate">Procurement &amp; Supply</h5>
+              <p class="text-[10px] text-slate-200">Vendor Automation</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- EXECUTIVE LEADERSHIP & ARCHITECTS (Scroll-Linked Moving Avatars) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-slate-50/70 border-t border-slate-200/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">Visionary Minds</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900">Executive Leadership Squad</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Led by senior enterprise software architects, AI scientists, and certified finance leaders.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-parent">
+        
+        <!-- Leader 1: Fahad -->
+        <div class="glass-card-light p-6 sm:p-7 rounded-3xl text-center space-y-4 tilt-card reveal-up">
+          <div class="team-track-container">
+            <div class="team-track-line">
+              <div class="team-track-fill"></div>
+            </div>
+            <div class="team-avatar-mover">
+              <img src="images/team/fahad.jpg" alt="Fahad - CTO &amp; AI Scientist" loading="lazy">
+              <span class="team-avatar-badge" title="Verified CTO"></span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-900">Fahad</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-cyan-700 mt-1">Chief Technology Officer</p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            19+ years enterprise software architecture. Microsoft Certified Trainer (MCT), MCAD, and Certified AI Scientist.
+          </p>
+          <div class="flex justify-center space-x-3 text-slate-500 pt-2">
+            <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-cyan-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="mailto:info@nayelsolutions.com" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-cyan-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-regular fa-envelope text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Leader 2: Umme Kalsoom -->
+        <div class="glass-card-light p-6 sm:p-7 rounded-3xl text-center space-y-4 tilt-card reveal-up" data-delay="100">
+          <div class="team-track-container">
+            <div class="team-track-line">
+              <div class="team-track-fill"></div>
+            </div>
+            <div class="team-avatar-mover">
+              <img src="images/team/umme-kalsoom.jpg" alt="Umme Kalsoom - ERP Lead &amp; CA" loading="lazy">
+              <span class="team-avatar-badge" title="Verified ERP Lead"></span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-900">Umme Kalsoom</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-pink-700 mt-1">ERP Lead · CA</p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Chartered Accountant with 5+ years at Ernst &amp; Young (EY), leading AI-ERP financial compliance and GAAP modeling.
+          </p>
+          <div class="flex justify-center space-x-3 text-slate-500 pt-2">
+            <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="mailto:info@nayelsolutions.com" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-regular fa-envelope text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Leader 3: Zahid -->
+        <div class="glass-card-light p-6 sm:p-7 rounded-3xl text-center space-y-4 tilt-card reveal-up" data-delay="200">
+          <div class="team-track-container">
+            <div class="team-track-line">
+              <div class="team-track-fill"></div>
+            </div>
+            <div class="team-avatar-mover">
+              <img src="images/team/zahid.jpg" alt="Zahid - HR Strategic Consultant" loading="lazy">
+              <span class="team-avatar-badge" title="Verified HR Consultant"></span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-900">Zahid</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-700 mt-1">HR Consultant</p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            14+ years leading global talent acquisition, agile engineering team performance, and leadership growth.
+          </p>
+          <div class="flex justify-center space-x-3 text-slate-500 pt-2">
+            <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-purple-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="mailto:info@nayelsolutions.com" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-purple-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-regular fa-envelope text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Leader 4: Nazish Jawad -->
+        <div class="glass-card-light p-6 sm:p-7 rounded-3xl text-center space-y-4 tilt-card reveal-up" data-delay="300">
+          <div class="team-track-container">
+            <div class="team-track-line">
+              <div class="team-track-fill"></div>
+            </div>
+            <div class="team-avatar-mover">
+              <img src="images/team/nazish-jawad.jpg" alt="Nazish Jawad - BDM &amp; PhD" loading="lazy">
+              <span class="team-avatar-badge" title="Verified BDM"></span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-slate-900">Nazish Jawad</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-700 mt-1">BDM · PhD</p>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            PhD in Management driving global enterprise partnerships, client strategic accounts in USA &amp; Middle East.
+          </p>
+          <div class="flex justify-center space-x-3 text-slate-500 pt-2">
+            <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="mailto:info@nayelsolutions.com" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center border border-slate-200 transition-colors"><i class="fa-regular fa-envelope text-xs"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CLIENT REVIEWS CONTINUOUS MARQUEE (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">Client Endorsements</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900">Trusted by Global Enterprise Leaders</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Real reviews from our corporate partners across USA, Saudi Arabia, and Pakistan.</p>
+      </div>
+
+      <div class="marquee-container">
+        <div class="marquee-track-left">
+          
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-cyan-50 border border-cyan-200">Verified Client</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Nayel Solutions built our custom ERP and accounting portal from scratch. Their agility, deep domain understanding of multi-currency tax, and 24/7 maintenance have transformed our operational efficiency."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                RK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Raza Khan</h4>
+                <p class="text-xs text-slate-500">COO · Logistics Corp (Miami, USA)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-200">EdTech</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "The Nayel Academy LMS platform deployed for our network of colleges handled over 15,000 active students seamlessly with zero administrative bottlenecks."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                TA
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Tariq Al-Mansoor</h4>
+                <p class="text-xs text-slate-500">Director of Academic Affairs (Jeddah, KSA)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200">Healthcare</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Hospital HMS delivered by Nayel Solutions is rock solid. The electronic medical record keeping and pharmacy inventory run flawlessly."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                SN
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Dr. Sarah Naeem</h4>
+                <p class="text-xs text-slate-500">Head of IT · Allied Clinics (Islamabad, PK)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seamless Loop -->
+          <div class="marquee-testimonial-card glass-card-light p-8 rounded-3xl flex flex-col justify-between tilt-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-500 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-[10px] font-bold text-cyan-700 uppercase tracking-widest px-2.5 py-1 rounded-full bg-cyan-50 border border-cyan-200">Verified Client</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed italic">
+                "Nayel Solutions built our custom ERP and accounting portal from scratch. Their agility, deep domain understanding of multi-currency tax, and 24/7 maintenance have transformed our operational efficiency."
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 text-white flex items-center justify-center font-bold text-base shadow-md">
+                RK
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-sm text-slate-900">Raza Khan</h4>
+                <p class="text-xs text-slate-500">COO · Logistics Corp (Miami, USA)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIGHTBOX MODAL -->
+  <!-- ========================================================================= -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl">
+    <button id="closeLightboxBtn" type="button" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-slate-900/90 text-white flex items-center justify-center border border-slate-700 hover:border-cyan-400 text-lg transition-all" aria-label="Close Lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightboxImage" src="" alt="Project Preview" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-slate-700">
+      <p id="lightboxCaption" class="text-sm font-semibold text-slate-200 mt-4 text-center px-4"></p>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CALL TO ACTION BANNER (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 relative overflow-hidden bg-slate-50/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-scale">
+      <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.2),_transparent_60%)] pointer-events-none"></div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white">Transform Your Enterprise Infrastructure</h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mt-3 mb-8">
+          Schedule a technical scoping session with our senior architects and receive a detailed project proposal within 24 hours.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:via-blue-500 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 hover:scale-105 active:scale-95 transition-all">
+            <span>Request a Free Quote</span>
+            <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
+          </a>
+          <a href="tel:+923278564834" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all">
+            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +92 327 8564834
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CORPORATE MIDNIGHT NAVY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0b132b] text-slate-300 border-t border-slate-800/80 pt-16 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-10 w-auto object-contain brightness-0 invert">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enterprise IT Consulting, Bespoke Software Engineering, Hardware Lab &amp; Cross-Platform Cloud Solutions.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xs"></i></a>
+            <a href="https://wa.me/923278564834" target="_blank" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Navigation</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home Overview</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400 transition-colors">Company &amp; Story</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">All 12 IT Services</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">In-House Products</a></li>
+            <li><a href="gallery.html" class="hover:text-cyan-400 transition-colors">Project Portfolio</a></li>
+            <li><a href="testimonials.html" class="hover:text-cyan-400 transition-colors">Client Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Solutions -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Products &amp; Labs</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">ERP OnClick Enterprise</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Nayel Academy LMS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Hospital HMS Suite</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Retail POS Multi-Branch</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Embedded Systems Lab</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">DevOps &amp; Cloud Infra</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Global Offices</p>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-cyan-400 mt-0.5"></i> <span>Islamabad, PK · Miami, USA · Jeddah, KSA</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> <a href="tel:+923278564834" class="hover:text-white">+92 327 8564834</a></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> <a href="mailto:info@nayelsolutions.com" class="hover:text-white">info@nayelsolutions.com</a></p>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-semibold">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Accepting New Projects 2026
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Nayel Solutions. All rights reserved.</p>
+        <div class="flex items-center space-x-6 text-slate-400">
+          <a href="contact.html" class="hover:text-cyan-400">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-cyan-400">Terms of Service</a>
+          <a href="contact.html" class="hover:text-cyan-400">Security SLA</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+923278564834" class="flex items-center justify-center w-11 h-11 rounded-full bg-cyan-600 text-white shadow-lg hover:scale-110 transition-transform" aria-label="Call Direct">
+      <i class="fa-solid fa-phone text-base"></i>
+    </a>
+    <button id="scrollToTopBtn" type="button" aria-label="Scroll to top" class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-slate-700 shadow-md border border-slate-200 opacity-0 pointer-events-none transition-all hover:bg-slate-50">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

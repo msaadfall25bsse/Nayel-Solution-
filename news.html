@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milestones &amp; News - Nayel Solutions | Company Journey &amp; Media</title>
+  <meta name="description" content="Read the latest news, enterprise contracts signed, national TV features, and key historical milestones achieved by Nayel Solutions.">
+  <link rel="shortcut icon" type="image/png" href="images/logo/logo-vertical.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0f172a',
+            brandSlate: '#1e293b',
+            brandBlue: '#2563eb',
+            brandCyan: '#0284c7',
+            brandNavy: '#0b132b',
+            brandLight: '#f8fafc',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Corporate Light Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-mesh-light opacity-60"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 grid-pattern-light opacity-40"></div>
+
+  <!-- Announcement Bar -->
+  <div class="relative z-50 bg-slate-900 text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-5">
+        <span class="text-cyan-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[7px]"></i> Company Timeline &amp; Press Releases</span>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400 transition-colors"><i class="fa-regular fa-envelope text-cyan-400"></i> info@nayelsolutions.com</a>
+        <a href="tel:+923278564834" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-400"></i> +92 327 8564834</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-300 text-[11px]"><i class="fa-solid fa-globe text-cyan-400"></i> Miami, USA · Islamabad, PK · Jeddah, KSA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300">
+    <div class="header-top-accent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo (Official Single Logo Image) -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center space-x-1 text-sm font-medium bg-white/90 p-1.5 rounded-full border border-slate-200/80 backdrop-blur-md shadow-sm">
+          <a href="index.html" class="nav-link-item">Home</a>
+          <a href="about.html" class="nav-link-item">About</a>
+          <a href="services.html" class="nav-link-item">Services</a>
+          <a href="products.html" class="nav-link-item">Products</a>
+          <a href="gallery.html" class="nav-link-item">Gallery</a>
+          <a href="testimonials.html" class="nav-link-item">Feedback</a>
+          <a href="news.html" class="nav-link-item nav-link-active">Milestones</a>
+          <a href="team.html" class="nav-link-item">Team</a>
+          <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 group">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-cyan-600 shadow-sm transition-colors">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l border-slate-200 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-9 w-auto object-contain">
+        </a>
+        <button id="closeMobileMenuBtn" type="button" class="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <nav class="mt-6 flex flex-col space-y-2 text-sm">
+        <a href="index.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Home</a>
+        <a href="about.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">About Us</a>
+        <a href="services.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Services</a>
+        <a href="products.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Products</a>
+        <a href="gallery.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Gallery</a>
+        <a href="testimonials.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Client Reviews</a>
+        <a href="news.html" class="mobile-nav-link p-3 rounded-xl bg-cyan-50 text-cyan-700 font-bold border border-cyan-200">Milestones &amp; News</a>
+        <a href="team.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Team</a>
+        <a href="contact.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="contact.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-indigo-600 text-white font-semibold text-sm shadow-md">Request Proposal</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- ========================================================================= -->
+  <section class="page-hero-banner-light relative overflow-hidden">
+    <!-- Distinct Background Video Layer -->
+    <div class="page-hero-video-wrapper">
+      <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
+        <source src="images/videos/news-tech-bg.mp4" type="video/mp4">
+      </video>
+      <div class="page-hero-video-overlay"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-indigo-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+        <i class="fa-solid fa-trophy text-amber-500"></i> Corporate Milestones &amp; Journey
+      </div>
+      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
+        Milestones, Events &amp; <br><span class="text-gradient-multi">Company News</span>
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Track our engineering achievements, national TV coverage, strategic enterprise agreements, and technology research highlights.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
+        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-indigo-700 font-semibold">Milestones</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTINUOUS MOVING CONTRACTS & PARTNERSHIPS TICKER (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-4 bg-white border-b border-slate-200 relative z-20 overflow-hidden shadow-xs">
+    <div class="marquee-container">
+      <div class="marquee-track-tech">
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-hospital-user text-cyan-600 text-base"></i><span>Dr. Samavia HMS Contract Sign-off</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-graduation-cap text-indigo-600 text-base"></i><span>UBT University CMS Jeddah Contract</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-building text-pink-600 text-base"></i><span>Al Juffali Group Budgeting System</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-tv text-amber-600 text-base"></i><span>National TV Media Feature</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-earth-americas text-emerald-600 text-base"></i><span>Miami USA Enterprise Expansion</span></div>
+
+        <!-- Seamless Duplicate Loop -->
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-hospital-user text-cyan-600 text-base"></i><span>Dr. Samavia HMS Contract Sign-off</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-graduation-cap text-indigo-600 text-base"></i><span>UBT University CMS Jeddah Contract</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-building text-pink-600 text-base"></i><span>Al Juffali Group Budgeting System</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-tv text-amber-600 text-base"></i><span>National TV Media Feature</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-earth-americas text-emerald-600 text-base"></i><span>Miami USA Enterprise Expansion</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CHRONOLOGICAL TIMELINE OF ACHIEVEMENTS -->
+  <!-- ========================================================================= -->
+  <section class="py-20 relative bg-slate-50/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="space-y-12 relative before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:-translate-x-px before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:via-indigo-500 before:to-pink-500">
+        
+        <!-- Milestone 1: 2026 -->
+        <div class="relative flex flex-col md:flex-row items-center gap-8 group">
+          <div class="md:w-1/2 md:text-right order-2 md:order-1 pl-16 md:pl-0 reveal-left">
+            <span class="text-xs font-bold text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200 uppercase tracking-wider">2026 · Innovation</span>
+            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Autonomous AI &amp; IoT Solutions</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Launched the next-generation autonomous AI Budgeting engine and integrated IoT fleet tracking telemetry across commercial clients.
+            </p>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-cyan-600 flex items-center justify-center text-cyan-600 shadow-md z-10 order-1">
+            <i class="fa-solid fa-brain text-xs"></i>
+          </div>
+          <div class="md:w-1/2 order-3 pl-16 md:pl-8 reveal-right">
+            <div class="glass-card-light p-5 rounded-2xl tilt-card">
+              <span class="text-xs text-cyan-700 font-bold uppercase tracking-wider">Milestone Highlight</span>
+              <p class="text-xs text-slate-600 mt-1 font-medium">Deployed in 35+ enterprises globally with 99.9% cloud uptime SLA guarantee.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2: 2025 -->
+        <div class="relative flex flex-col md:flex-row items-center gap-8 group">
+          <div class="md:w-1/2 md:text-right order-2 md:order-1 pl-16 md:pl-0 reveal-left">
+            <div class="glass-card-light p-5 rounded-2xl tilt-card">
+              <span class="text-xs text-indigo-700 font-bold uppercase tracking-wider">Milestone Highlight</span>
+              <p class="text-xs text-slate-600 mt-1 font-medium">Surpassed 11,500+ engineering hours and 17 multinational corporate accounts.</p>
+            </div>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center text-indigo-600 shadow-md z-10 order-1">
+            <i class="fa-solid fa-globe text-xs"></i>
+          </div>
+          <div class="md:w-1/2 order-3 pl-16 md:pl-8 reveal-right">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200 uppercase tracking-wider">2025 · Global Expansion</span>
+            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Miami (USA) &amp; Gulf Operations</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Formalized corporate presence in Miami, Florida (USA) and expanded enterprise ERP contracts across Jeddah and Riyadh (Saudi Arabia).
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3: 2024 -->
+        <div class="relative flex flex-col md:flex-row items-center gap-8 group">
+          <div class="md:w-1/2 md:text-right order-2 md:order-1 pl-16 md:pl-0 reveal-left">
+            <span class="text-xs font-bold text-pink-700 bg-pink-50 px-2.5 py-0.5 rounded-full border border-pink-200 uppercase tracking-wider">2024 · Hardware Engineering</span>
+            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Defense &amp; Simulator Rig R&amp;D</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Established dedicated hardware R&amp;D laboratory for custom flight simulators, electronic training rigs, and embedded IoT controllers.
+            </p>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-pink-600 flex items-center justify-center text-pink-600 shadow-md z-10 order-1">
+            <i class="fa-solid fa-microchip text-xs"></i>
+          </div>
+          <div class="md:w-1/2 order-3 pl-16 md:pl-8 reveal-right">
+            <div class="glass-card-light p-5 rounded-2xl tilt-card">
+              <span class="text-xs text-pink-700 font-bold uppercase tracking-wider">Milestone Highlight</span>
+              <p class="text-xs text-slate-600 mt-1 font-medium">Delivered high-precision training cockpits and telemetry hardware.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 4: 2023 -->
+        <div class="relative flex flex-col md:flex-row items-center gap-8 group">
+          <div class="md:w-1/2 md:text-right order-2 md:order-1 pl-16 md:pl-0 reveal-left">
+            <div class="glass-card-light p-5 rounded-2xl tilt-card">
+              <span class="text-xs text-blue-700 font-bold uppercase tracking-wider">Milestone Highlight</span>
+              <p class="text-xs text-slate-600 mt-1 font-medium">Broadcasted nationwide on PTV, ARY News, and tech business forums.</p>
+            </div>
+          </div>
+          <div class="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-blue-600 flex items-center justify-center text-blue-600 shadow-md z-10 order-1">
+            <i class="fa-solid fa-tv text-xs"></i>
+          </div>
+          <div class="md:w-1/2 order-3 pl-16 md:pl-8 reveal-right">
+            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200 uppercase tracking-wider">2023 · Media &amp; Recognition</span>
+            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">National TV Features &amp; MoUs</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Featured across leading television networks and signed strategic academic MoUs with universities to train tech engineers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTRACTS & PRESS RELEASES -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-indigo-50 text-indigo-800 text-xs font-bold uppercase tracking-wider">Media &amp; Agreements</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mt-2">Recent Contracts &amp; Media</h2>
+        <p class="text-slate-600 text-sm mt-2">Latest press coverage, MoUs, and enterprise partnership releases.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-parent">
+        <div class="glass-card-light p-6 rounded-3xl space-y-3 tilt-card reveal-up">
+          <span class="text-[10px] font-bold text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded-full border border-cyan-200 uppercase tracking-wider">Corporate MoU</span>
+          <h4 class="font-heading font-bold text-lg text-slate-900">Enterprise ERP Agreement Signed</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Nayel Solutions signs multi-year digital transformation contract with leading supply chain conglomerate.</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-3xl space-y-3 tilt-card reveal-up" data-delay="100">
+          <span class="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200 uppercase tracking-wider">EdTech Rollout</span>
+          <h4 class="font-heading font-bold text-lg text-slate-900">Academy LMS Adopted by 10+ Institutes</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Over 15,000 students onboarded onto Nayel Academy LMS across major campuses in Pakistan and Gulf region.</p>
+        </div>
+
+        <div class="glass-card-light p-6 rounded-3xl space-y-3 tilt-card reveal-up" data-delay="200">
+          <span class="text-[10px] font-bold text-pink-700 bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200 uppercase tracking-wider">Hardware Tech</span>
+          <h4 class="font-heading font-bold text-lg text-slate-900">Custom Simulator Cockpit Delivered</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Delivered specialized mission-critical training cockpit with hardware-in-the-loop electronic telemetry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CORPORATE MIDNIGHT NAVY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0b132b] text-slate-300 border-t border-slate-800/80 pt-16 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-10 w-auto object-contain brightness-0 invert">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enterprise IT Consulting, Bespoke Software Engineering, Hardware Lab &amp; Cross-Platform Cloud Solutions.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xs"></i></a>
+            <a href="https://wa.me/923278564834" target="_blank" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Navigation</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home Overview</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400 transition-colors">Company &amp; Story</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">All 12 IT Services</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">In-House Products</a></li>
+            <li><a href="gallery.html" class="hover:text-cyan-400 transition-colors">Project Portfolio</a></li>
+            <li><a href="testimonials.html" class="hover:text-cyan-400 transition-colors">Client Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Solutions -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Products &amp; Labs</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">ERP OnClick Enterprise</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Nayel Academy LMS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Hospital HMS Suite</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Retail POS Multi-Branch</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Embedded Systems Lab</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">DevOps &amp; Cloud Infra</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Global Offices</p>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-cyan-400 mt-0.5"></i> <span>Islamabad, PK · Miami, USA · Jeddah, KSA</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> <a href="tel:+923278564834" class="hover:text-white">+92 327 8564834</a></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> <a href="mailto:info@nayelsolutions.com" class="hover:text-white">info@nayelsolutions.com</a></p>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-semibold">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Accepting New Projects 2026
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Nayel Solutions. All rights reserved.</p>
+        <div class="flex items-center space-x-6 text-slate-400">
+          <a href="contact.html" class="hover:text-cyan-400">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-cyan-400">Terms of Service</a>
+          <a href="contact.html" class="hover:text-cyan-400">Security SLA</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+923278564834" class="flex items-center justify-center w-11 h-11 rounded-full bg-cyan-600 text-white shadow-lg hover:scale-110 transition-transform" aria-label="Call Direct">
+      <i class="fa-solid fa-phone text-base"></i>
+    </a>
+    <button id="scrollToTopBtn" type="button" aria-label="Scroll to top" class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-slate-700 shadow-md border border-slate-200 opacity-0 pointer-events-none transition-all hover:bg-slate-50">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

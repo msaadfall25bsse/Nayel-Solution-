@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In-House Products - Nayel Solutions | Enterprise AI-ERP, LMS &amp; HMS</title>
+  <meta name="description" content="Explore Nayel Solutions proprietary in-house enterprise software suites: AI-ERP, LMS Academy, Hospital Management System (HMS), Smart POS, and AI Budgeting.">
+  <link rel="shortcut icon" type="image/png" href="images/logo/logo-vertical.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0f172a',
+            brandCard: '#ffffff',
+            brandCyan: '#06b6d4',
+            brandBlue: '#2563eb',
+            brandPurple: '#7c3aed',
+            brandPink: '#db2777',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Light Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-mesh-light opacity-90"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 grid-pattern-light opacity-60"></div>
+
+  <!-- Announcement Bar -->
+  <div class="relative z-50 bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 hidden md:block text-slate-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-slate-300">
+      <div class="flex items-center space-x-5">
+        <span class="text-cyan-400 font-medium flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] animate-pulse"></i> Nayel Solutions · In-House Enterprise Products</span>
+        <span class="text-slate-600">|</span>
+        <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400 transition-colors"><i class="fa-regular fa-envelope text-cyan-400"></i> info@nayelsolutions.com</a>
+        <a href="tel:+923278564834" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-400"></i> +92 327 8564834</a>
+      </div>
+      <div class="flex items-center space-x-4 text-slate-400 text-[11px]">
+        <span><i class="fa-solid fa-globe text-purple-400"></i> Miami, USA · Islamabad, PK · Jeddah, KSA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300">
+    <div class="header-top-accent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo (Official Image Logo) -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(6,182,212,0.25)]">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center space-x-1 text-sm font-medium bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 shadow-inner">
+          <a href="index.html" class="nav-link-item">Home</a>
+          <a href="about.html" class="nav-link-item">About</a>
+          <a href="services.html" class="nav-link-item">Services</a>
+          <a href="products.html" class="nav-link-item nav-link-active">Products</a>
+          <a href="gallery.html" class="nav-link-item">Gallery</a>
+          <a href="testimonials.html" class="nav-link-item">Feedback</a>
+          <a href="news.html" class="nav-link-item">Milestones</a>
+          <a href="team.html" class="nav-link-item">Team</a>
+          <a href="contact.html" class="nav-link-item">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 group">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-cyan-600 hover:border-cyan-400 shadow-sm transition-colors">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white/95 border-l border-slate-200 backdrop-blur-2xl z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-9 w-auto object-contain">
+        </a>
+        <button id="closeMobileMenuBtn" type="button" class="p-2 rounded-lg bg-slate-100 text-slate-500 hover:text-slate-800"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <nav class="mt-6 flex flex-col space-y-2 text-sm font-medium">
+        <a href="index.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Home</a>
+        <a href="about.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">About Us</a>
+        <a href="services.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Services</a>
+        <a href="products.html" class="mobile-nav-link p-3 rounded-xl bg-cyan-50 text-cyan-700 border border-cyan-200">In-House Products</a>
+        <a href="gallery.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Gallery</a>
+        <a href="testimonials.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Client Reviews</a>
+        <a href="news.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Milestones &amp; News</a>
+        <a href="team.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Team</a>
+        <a href="contact.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-100 text-slate-700">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="contact.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold text-sm shadow-md shadow-cyan-500/20">Request Demo</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- ========================================================================= -->
+  <section class="page-hero-banner-light relative overflow-hidden">
+    <!-- Distinct Background Video Layer -->
+    <div class="page-hero-video-wrapper">
+      <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
+        <source src="images/videos/products-tech-bg.mp4" type="video/mp4">
+      </video>
+      <div class="page-hero-video-overlay"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+        <i class="fa-solid fa-laptop-code"></i> PROPRIETARY ENTERPRISE SOFTWARE
+      </div>
+      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
+        In-House Enterprise <br><span class="text-gradient-cyan">Software Solutions</span>
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Turnkey, intelligent ERP, LMS, Hospital, and POS suites engineered by Nayel Solutions to digitalize institutional operations.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
+        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-cyan-600 font-semibold">In-House Products</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3 FEATURED QUICK ACCESS CARDS -->
+  <!-- ========================================================================= -->
+  <section class="py-10 sm:py-14 relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="quick-access-card p-5 sm:p-6 flex items-center gap-4 sm:gap-5 group cursor-pointer scroll-reveal delay-100 open-product-modal" data-product="ai-erp">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-cyan-50 flex-shrink-0 flex items-center justify-center p-2.5 border border-cyan-100 group-hover:scale-110 group-hover:bg-cyan-100 group-hover:shadow-md transition-all">
+            <img src="images/icons/ic1.png" alt="Our ERP" class="w-full h-full object-contain">
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-heading font-bold text-lg sm:text-xl text-slate-900 group-hover:text-cyan-600 transition-colors truncate">Our ERP</h4>
+            <p class="text-xs text-slate-500 mt-0.5 font-medium truncate">Comprehensive ERP Suite</p>
+          </div>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 flex-shrink-0 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white group-hover:shadow-md transition-all">
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+        <div class="quick-access-card p-5 sm:p-6 flex items-center gap-4 sm:gap-5 group cursor-pointer scroll-reveal delay-200 open-product-modal" data-product="academy">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-purple-50 flex-shrink-0 flex items-center justify-center p-2.5 border border-purple-100 group-hover:scale-110 group-hover:bg-purple-100 group-hover:shadow-md transition-all">
+            <img src="images/icons/ic2.png" alt="Our LMS" class="w-full h-full object-contain">
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-heading font-bold text-lg sm:text-xl text-slate-900 group-hover:text-purple-600 transition-colors truncate">Our LMS</h4>
+            <p class="text-xs text-slate-500 mt-0.5 font-medium truncate">LMS &amp; Institute Portal</p>
+          </div>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 flex-shrink-0 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white group-hover:shadow-md transition-all">
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+        <div class="quick-access-card p-5 sm:p-6 flex items-center gap-4 sm:gap-5 group cursor-pointer scroll-reveal delay-300 open-product-modal" data-product="hospital">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-pink-50 flex-shrink-0 flex items-center justify-center p-2.5 border border-pink-100 group-hover:scale-110 group-hover:bg-pink-100 group-hover:shadow-md transition-all">
+            <img src="images/icons/ic3.png" alt="Other Products" class="w-full h-full object-contain">
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-heading font-bold text-lg sm:text-xl text-slate-900 group-hover:text-pink-600 transition-colors truncate">Other Products</h4>
+            <p class="text-xs text-slate-500 mt-0.5 font-medium truncate">HMS, POS &amp; AI Budgeting</p>
+          </div>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 flex-shrink-0 flex items-center justify-center text-pink-600 group-hover:bg-pink-600 group-hover:text-white group-hover:shadow-md transition-all">
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TECH STACK & ARCHITECTURE ECOSYSTEM (60FPS CONTINUOUS MARQUEE) -->
+  <!-- ========================================================================= -->
+  <section class="py-4 bg-slate-50 border-t border-slate-200/80 relative z-20 overflow-hidden shadow-xs">
+    <div class="marquee-container">
+      <div class="marquee-track-tech">
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-microsoft text-cyan-600 text-base"></i><span>ASP.NET Core 8 &amp; C#</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-react text-blue-600 text-base"></i><span>React 18 &amp; Next.js</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-python text-amber-600 text-base"></i><span>Python AI &amp; PyTorch</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-flutter text-cyan-500 text-base"></i><span>Flutter Mobile (iOS &amp; Android)</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-aws text-orange-600 text-base"></i><span>AWS Serverless &amp; Cloud</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-database text-indigo-600 text-base"></i><span>PostgreSQL &amp; Redis Cache</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-docker text-blue-500 text-base"></i><span>Docker &amp; Kubernetes</span></div>
+
+        <!-- Seamless Duplicate Loop -->
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-microsoft text-cyan-600 text-base"></i><span>ASP.NET Core 8 &amp; C#</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-react text-blue-600 text-base"></i><span>React 18 &amp; Next.js</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-python text-amber-600 text-base"></i><span>Python AI &amp; PyTorch</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-flutter text-cyan-500 text-base"></i><span>Flutter Mobile (iOS &amp; Android)</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-aws text-orange-600 text-base"></i><span>AWS Serverless &amp; Cloud</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-database text-indigo-600 text-base"></i><span>PostgreSQL &amp; Redis Cache</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-docker text-blue-500 text-base"></i><span>Docker &amp; Kubernetes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTINUOUS MOVING IN-HOUSE PRODUCT SCREENSHOTS STREAM -->
+  <!-- ========================================================================= -->
+  <section class="py-6 bg-white border-t border-b border-slate-200/80 relative z-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-pulse"></span>
+        <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-cyan-700">Live Enterprise Software Stream</h3>
+      </div>
+      <span class="text-xs text-slate-500 hidden sm:inline font-medium">Tap or Click to Inspect Any Suite</span>
+    </div>
+    
+    <div class="marquee-container">
+      <div class="marquee-track-left">
+        
+        <!-- Product Card 1 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="ai-erp">
+          <img src="images/projects/2.jpg" alt="AI ERP Suite" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-cyan-300">Flagship ERP</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel AI-ERP on Click</h5>
+            <p class="text-[10px] text-slate-200">Financials, HR &amp; Supply Chain</p>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="hospital">
+          <img src="images/projects/hospital-hms-dashboard.jpg" alt="Hospital HMS" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-pink-300">HealthTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Hospital HMS</h5>
+            <p class="text-[10px] text-slate-200">EHR, Bed &amp; Pharmacy Control</p>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="academy">
+          <img src="images/projects/1.jpg" alt="Academy LMS" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-purple-300">EdTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Academy on Click LMS</h5>
+            <p class="text-[10px] text-slate-200">Virtual Classrooms &amp; Exams</p>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="shopit">
+          <img src="images/projects/global-marketplace-dashboard.jpg" alt="Shopit E-Commerce" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-cyan-300">E-Commerce</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Shopit Multi-Vendor</h5>
+            <p class="text-[10px] text-slate-200">Global Payment Gateway</p>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="budget">
+          <img src="images/projects/budgeting.jpg" alt="Budgeting System" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-emerald-300">FinTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Enterprise Budgeting</h5>
+            <p class="text-[10px] text-slate-200">Cost Center &amp; Expense Approval</p>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="pos">
+          <img src="images/projects/nayel-mobile-suite.jpg" alt="Mobile POS Suite" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-amber-300">Mobile &amp; POS</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Mobile &amp; POS</h5>
+            <p class="text-[10px] text-slate-200">Barcode Retail Billing</p>
+          </div>
+        </div>
+
+        <!-- Seamless Duplicate Loop -->
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="ai-erp">
+          <img src="images/projects/2.jpg" alt="AI ERP Suite" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-cyan-300">Flagship ERP</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel AI-ERP on Click</h5>
+            <p class="text-[10px] text-slate-200">Financials, HR &amp; Supply Chain</p>
+          </div>
+        </div>
+
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="hospital">
+          <img src="images/projects/hospital-hms-dashboard.jpg" alt="Hospital HMS" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-pink-300">HealthTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Hospital HMS</h5>
+            <p class="text-[10px] text-slate-200">EHR, Bed &amp; Pharmacy Control</p>
+          </div>
+        </div>
+
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="academy">
+          <img src="images/projects/1.jpg" alt="Academy LMS" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-purple-300">EdTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Academy on Click LMS</h5>
+            <p class="text-[10px] text-slate-200">Virtual Classrooms &amp; Exams</p>
+          </div>
+        </div>
+
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="shopit">
+          <img src="images/projects/global-marketplace-dashboard.jpg" alt="Shopit E-Commerce" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-cyan-300">E-Commerce</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Shopit Multi-Vendor</h5>
+            <p class="text-[10px] text-slate-200">Global Payment Gateway</p>
+          </div>
+        </div>
+
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="budget">
+          <img src="images/projects/budgeting.jpg" alt="Budgeting System" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-emerald-300">FinTech</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Enterprise Budgeting</h5>
+            <p class="text-[10px] text-slate-200">Cost Center &amp; Expense Approval</p>
+          </div>
+        </div>
+
+        <div class="marquee-product-card gallery-thumb-card-light group cursor-pointer open-product-modal" data-product="pos">
+          <img src="images/projects/nayel-mobile-suite.jpg" alt="Mobile POS Suite" class="gallery-thumb-img h-44 w-full object-cover">
+          <div class="gallery-overlay">
+            <span class="text-[9px] font-bold uppercase text-amber-300">Mobile &amp; POS</span>
+            <h5 class="font-heading font-bold text-xs text-white truncate">Nayel Mobile &amp; POS</h5>
+            <p class="text-[10px] text-slate-200">Barcode Retail Billing</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DETAILED IN-HOUSE ENTERPRISE PRODUCT SUITES -->
+  <!-- ========================================================================= -->
+  <section class="py-12 sm:py-20 relative overflow-hidden">
+    <!-- Ambient Aurora Gradient Lighting -->
+    <div class="aurora-orb aurora-orb-cyan top-20 -left-20"></div>
+    <div class="aurora-orb aurora-orb-purple top-1/2 -right-24"></div>
+    <div class="aurora-orb aurora-orb-pink bottom-20 -left-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 relative z-10">
+      
+      <!-- PRODUCT 1: Nayel AI-ERP Suite -->
+      <div id="ai-erp" class="product-card-elevated card-spotlight grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center p-6 sm:p-10 lg:p-12 scroll-reveal">
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <i class="fa-solid fa-cubes-stacked"></i> FLAGSHIP ERP
+          </div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight">Nayel AI-ERP Suite</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            An all-in-one Enterprise Resource Planning system powered by AI automation. Unifies accounting, inventory, supply chain, automated payroll, customer relations, and business intelligence.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i><span class="font-medium">Double-entry GAAP Accounting</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i><span class="font-medium">Multi-warehouse Barcode Tracking</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i><span class="font-medium">Biometric Attendance &amp; Payroll</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyan-600"></i><span class="font-medium">Real-time AI Forecasting BI</span></div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <button type="button" class="open-product-modal w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:via-blue-500 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2" data-product="ai-erp">
+              <span>View Full Specs &amp; Modules</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-slate-700 bg-slate-100 border border-slate-200 hover:border-cyan-400 hover:bg-slate-200 transition-all text-center flex items-center justify-center">
+              Request Live Demo
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <!-- Floating Mockup Badges -->
+          <div class="floating-badge-tech floating-badge-pos-tr">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>⚡ 99.99% Cloud Uptime</span>
+          </div>
+          <div class="floating-badge-tech floating-badge-pos-bl">
+            <i class="fa-solid fa-robot text-cyan-600"></i>
+            <span>AI Predictive Ledger</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-50 p-2 group hover:border-cyan-400 transition-all">
+            <img src="images/projects/erponclick-core-dashboard.jpg" alt="Nayel AI ERP Architecture" class="w-full h-auto object-cover rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2: Nayel Academy LMS -->
+      <div id="academy" class="product-card-elevated card-spotlight grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center p-6 sm:p-10 lg:p-12 scroll-reveal">
+        <div class="lg:col-span-6 order-2 lg:order-1 relative">
+          <!-- Floating Mockup Badges -->
+          <div class="floating-badge-tech floating-badge-pos-tl">
+            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <span>🎓 15,000+ Active Students</span>
+          </div>
+          <div class="floating-badge-tech floating-badge-pos-br">
+            <i class="fa-solid fa-mobile-screen-button text-purple-600"></i>
+            <span>iOS / Android App Live</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-50 p-2 group hover:border-purple-400 transition-all">
+            <img src="images/projects/lms-academy-dashboard.jpg" alt="Nayel Academy LMS" class="w-full h-auto object-cover rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <i class="fa-solid fa-graduation-cap"></i> EDTECH SUITE
+          </div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight">Nayel Academy LMS</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Advanced Learning Management System and Institute Portal for schools, colleges, and corporate training centers. Includes live virtual classrooms, interactive quizzes, automated grading, and parent portals.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-600"></i><span class="font-medium">Interactive Video Classes</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-600"></i><span class="font-medium">Automated Exam &amp; Quiz Engine</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-600"></i><span class="font-medium">Fee Voucher Generation</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-600"></i><span class="font-medium">WhatsApp &amp; SMS Parent Alerts</span></div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <button type="button" class="open-product-modal w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 hover:from-purple-400 hover:via-indigo-500 hover:to-pink-500 shadow-lg shadow-purple-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2" data-product="academy">
+              <span>View Full Specs &amp; Modules</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-slate-700 bg-slate-100 border border-slate-200 hover:border-purple-400 hover:bg-slate-200 transition-all text-center flex items-center justify-center">
+              Request Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3: Nayel Hospital HMS -->
+      <div id="hospital" class="product-card-elevated card-spotlight grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center p-6 sm:p-10 lg:p-12 scroll-reveal">
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <i class="fa-solid fa-hospital"></i> HEALTHCARE TECH
+          </div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight">Nayel Hospital HMS</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Enterprise Hospital &amp; Clinic Information Management System. Automates patient registration, electronic health records (EHR), OPD/IPD beds, laboratory test reports, pharmacy inventory, and medical insurance claims.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-pink-600"></i><span class="font-medium">Complete EHR Patient History</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-pink-600"></i><span class="font-medium">OPD/IPD Bed Allotment</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-pink-600"></i><span class="font-medium">Pharmacy &amp; Expiry Control</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-pink-600"></i><span class="font-medium">Diagnostic Lab Equipment Sync</span></div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <button type="button" class="open-product-modal w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-pink-500 via-rose-600 to-purple-600 hover:from-pink-400 hover:via-rose-500 hover:to-purple-500 shadow-lg shadow-pink-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2" data-product="hospital">
+              <span>View Full Specs &amp; Modules</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-slate-700 bg-slate-100 border border-slate-200 hover:border-pink-400 hover:bg-slate-200 transition-all text-center flex items-center justify-center">
+              Request Live Demo
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <!-- Floating Mockup Badges -->
+          <div class="floating-badge-tech floating-badge-pos-tr">
+            <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+            <span>🏥 HL7 / HIPAA Standards</span>
+          </div>
+          <div class="floating-badge-tech floating-badge-pos-bl">
+            <i class="fa-solid fa-capsules text-pink-600"></i>
+            <span>Automated Pharmacy Sync</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-50 p-2 group hover:border-pink-400 transition-all">
+            <img src="images/projects/healthcare-hms-suite.jpg" alt="Nayel Hospital HMS Dashboard" class="w-full h-auto object-cover rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4: Nayel Corporate Budgeting Suite -->
+      <div id="budgeting" class="product-card-elevated card-spotlight grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center p-6 sm:p-10 lg:p-12 scroll-reveal">
+        <div class="lg:col-span-6 order-2 lg:order-1 relative">
+          <!-- Floating Mockup Badges -->
+          <div class="floating-badge-tech floating-badge-pos-tl">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>📊 Real-Time Capex Variance</span>
+          </div>
+          <div class="floating-badge-tech floating-badge-pos-br">
+            <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+            <span>SOC2 Audit Ready</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-50 p-2 group hover:border-emerald-400 transition-all">
+            <img src="images/projects/corporate-budgeting-forecast.jpg" alt="Nayel Corporate Budgeting & Capex Forecast" class="w-full h-auto object-cover rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-[1.02]">
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <i class="fa-solid fa-chart-pie"></i> FINTECH &amp; BUDGETING
+          </div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight">Quantum Budgeting &amp; Capex</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Automated corporate budgeting, capital expenditure forecasting, multi-tier expense approval workflows, and audit-ready P&amp;L variance analysis.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i><span class="font-medium">Departmental Cost Center Allocation</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i><span class="font-medium">Automated Multi-Tier Approval Matrix</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i><span class="font-medium">Real-Time P&amp;L Variance Analysis</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i><span class="font-medium">Multi-Currency Cash Flow Projections</span></div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <button type="button" class="open-product-modal w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 hover:from-emerald-400 hover:via-teal-500 hover:to-cyan-500 shadow-lg shadow-emerald-500/25 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2" data-product="budget">
+              <span>View Full Specs &amp; Modules</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-slate-700 bg-slate-100 border border-slate-200 hover:border-emerald-400 hover:bg-slate-200 transition-all text-center flex items-center justify-center">
+              Request Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE PRODUCT COMPARISON & FEATURE MATRIX -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-white border-t border-slate-200/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 reveal-up">
+        <span class="px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">Enterprise Architecture</span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900">Capabilities &amp; Deployment Matrix</h2>
+        <p class="text-slate-600 text-sm sm:text-base">Compare feature sets, compliance standards, and integration protocols across our enterprise software suites.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 reveal-up">
+        <button type="button" class="product-feature-tab-btn feature-tab-btn active" data-tab="all">
+          <i class="fa-solid fa-layer-group"></i> All 4 Suites
+        </button>
+        <button type="button" class="product-feature-tab-btn feature-tab-btn" data-tab="ai-erp">
+          <i class="fa-solid fa-cubes-stacked"></i> Nayel AI-ERP
+        </button>
+        <button type="button" class="product-feature-tab-btn feature-tab-btn" data-tab="academy">
+          <i class="fa-solid fa-graduation-cap"></i> Academy LMS
+        </button>
+        <button type="button" class="product-feature-tab-btn feature-tab-btn" data-tab="hospital">
+          <i class="fa-solid fa-hospital"></i> Hospital HMS
+        </button>
+        <button type="button" class="product-feature-tab-btn feature-tab-btn" data-tab="budget">
+          <i class="fa-solid fa-chart-pie"></i> FinTech Budgeting
+        </button>
+      </div>
+
+      <!-- Feature Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-parent">
+        
+        <!-- Feature 1 -->
+        <div class="product-feature-panel glass-card-light p-6 rounded-3xl space-y-4 tilt-card" data-tab-content="all">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl shadow-sm">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <h4 class="font-heading font-bold text-lg text-slate-900">Cloud &amp; On-Premise</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Deploy seamlessly on AWS, Microsoft Azure, Google Cloud, or self-hosted private bare-metal servers.</p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-cyan-700">
+            <span>SLA Guarantee</span>
+            <span>99.99% Uptime</span>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="product-feature-panel glass-card-light p-6 rounded-3xl space-y-4 tilt-card" data-tab-content="all">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl shadow-sm">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="font-heading font-bold text-lg text-slate-900">Zero Trust Security</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Granular role-based permissions (RBAC), multi-factor authentication, end-to-end 256-bit encryption.</p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-purple-700">
+            <span>Data Protection</span>
+            <span>AES-256 + SSL</span>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="product-feature-panel glass-card-light p-6 rounded-3xl space-y-4 tilt-card" data-tab-content="all">
+          <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl shadow-sm">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h4 class="font-heading font-bold text-lg text-slate-900">REST &amp; GraphQL APIs</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Connect existing legacy databases, third-party payment gateways, CRM, and biometric hardware.</p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-pink-700">
+            <span>Integration</span>
+            <span>Webhooks Ready</span>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="product-feature-panel glass-card-light p-6 rounded-3xl space-y-4 tilt-card" data-tab-content="all">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl shadow-sm">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h4 class="font-heading font-bold text-lg text-slate-900">24/7 Dedicated Support</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Full technical onboarding, staff user training workshops, continuous security patches and version upgrades.</p>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
+            <span>Response Time</span>
+            <span>&lt; 15 Minutes</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL FOR PRODUCT DETAILS (Dynamic View) -->
+  <!-- ========================================================================= -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="productModalBackdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-md"></div>
+    <div class="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span id="modalProductBadge" class="text-[10px] font-bold uppercase tracking-wider text-cyan-700 px-2.5 py-0.5 rounded-full bg-cyan-50 border border-cyan-200 mb-1 inline-block">Product</span>
+          <h3 id="modalProductTitle" class="font-heading font-black text-2xl text-slate-900">Product Overview</h3>
+        </div>
+        <button id="closeProductModalBtn" type="button" class="p-2 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-800">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <p id="modalProductDesc" class="text-sm text-slate-600 my-4 leading-relaxed"></p>
+      <div class="my-4">
+        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-cyan-700 mb-2">Key Modules &amp; Capabilities</h4>
+        <ul id="modalProductHighlights" class="space-y-2 text-xs text-slate-700"></ul>
+      </div>
+      <div class="pt-6 border-t border-slate-100 flex justify-end gap-3">
+        <a href="contact.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold text-xs shadow-md shadow-cyan-500/20">Request Live Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CALL TO ACTION BANNER -->
+  <!-- ========================================================================= -->
+  <section class="py-20 relative overflow-hidden bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 scroll-reveal">
+      <div class="p-10 sm:p-14 rounded-3xl border border-cyan-200/80 relative overflow-hidden bg-gradient-to-tr from-slate-900 via-slate-800 to-cyan-950 text-white shadow-2xl">
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white">Deploy Nayel Software in Your Enterprise</h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mt-3 mb-8 leading-relaxed">
+          Available as private cloud SaaS or dedicated on-premise installation with complete data sovereignty and 24/7 SLA.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-xl shadow-cyan-500/30 transition-all hover:scale-105">
+            <span>Schedule a Live Walkthrough</span>
+            <i class="fa-solid fa-arrow-right text-xs ml-2"></i>
+          </a>
+          <a href="tel:+923278564834" class="px-8 py-4 rounded-full text-base font-semibold text-white bg-slate-800/90 border border-slate-600 hover:border-cyan-400 transition-all hover:bg-slate-700">
+            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +92 327 8564834
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER (High-Contrast Midnight Navy) -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0b132b] text-slate-300 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center group py-1">
+            <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-10 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(6,182,212,0.4)]">
+          </a>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Leading software consulting and development company delivering enterprise ERP, LMS, HMS, AI automation, and cloud services worldwide.
+          </p>
+          <div class="flex items-center space-x-3 text-slate-400 pt-2">
+            <a href="https://www.facebook.com/nayelsolutions/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-cyan-400 border border-slate-800"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/SolutionsNayel" target="_blank" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-cyan-400 border border-slate-800"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/nayel-solutions" target="_blank" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-cyan-400 border border-slate-800"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nayelsolutions/?hl=en" target="_blank" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-cyan-400 border border-slate-800"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">12 Services</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">In-House Products</a></li>
+            <li><a href="gallery.html" class="hover:text-cyan-400 transition-colors">Projects Gallery</a></li>
+            <li><a href="testimonials.html" class="hover:text-cyan-400 transition-colors">Client Reviews</a></li>
+            <li><a href="news.html" class="hover:text-cyan-400 transition-colors">Milestones</a></li>
+            <li><a href="team.html" class="hover:text-cyan-400 transition-colors">Our Team</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Core Products</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="products.html#ai-erp" class="hover:text-cyan-400">Nayel AI-ERP</a></li>
+            <li><a href="products.html#academy" class="hover:text-cyan-400">Nayel Academy LMS</a></li>
+            <li><a href="products.html#hospital" class="hover:text-cyan-400">Nayel Hospital HMS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400">Nayel Smart POS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400">AI Budgeting Suite</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400">IoT Fleet System</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-xs text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-cyan-400 mt-1"></i>
+              <span>Miami (USA) · Islamabad (PK) · Jeddah (KSA)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-regular fa-envelope text-cyan-400"></i>
+              <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400">info@nayelsolutions.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-cyan-400"></i>
+              <a href="tel:+923278564834" class="hover:text-cyan-400">+92 327 8564834</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Nayel Solutions. All rights reserved. Registered Technology &amp; IT Consulting Enterprise.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+923278564834" class="flex items-center justify-center w-11 h-11 rounded-full bg-cyan-600 text-white shadow-lg hover:scale-110 transition-transform" aria-label="Call Direct">
+      <i class="fa-solid fa-phone text-base"></i>
+    </a>
+    <button id="scrollToTopBtn" type="button" aria-label="Scroll to top" class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-900 text-slate-300 border border-slate-700 opacity-0 pointer-events-none transition-all">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

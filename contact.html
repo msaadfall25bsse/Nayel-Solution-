@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Nayel Solutions | Global IT Headquarters &amp; Inquiries</title>
+  <meta name="description" content="Get in touch with Nayel Solutions for enterprise software development, ERP systems, AI automation, and custom technology solutions. Offices in Miami (USA), Islamabad (PK), and Jeddah (KSA).">
+  <link rel="shortcut icon" type="image/png" href="images/logo/logo-vertical.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0f172a',
+            brandSlate: '#1e293b',
+            brandBlue: '#2563eb',
+            brandCyan: '#0284c7',
+            brandNavy: '#0b132b',
+            brandLight: '#f8fafc',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-800 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- Ambient Corporate Light Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-mesh-light opacity-60"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 grid-pattern-light opacity-40"></div>
+
+  <!-- Announcement Bar -->
+  <div class="relative z-50 bg-slate-900 text-slate-200 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-5">
+        <span class="text-cyan-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[7px]"></i> Global Consulting &amp; Engineering Inquiries</span>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:info@nayelsolutions.com" class="hover:text-cyan-400 transition-colors"><i class="fa-regular fa-envelope text-cyan-400"></i> info@nayelsolutions.com</a>
+        <a href="tel:+923278564834" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-phone text-cyan-400"></i> +92 327 8564834</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-300 text-[11px]"><i class="fa-solid fa-globe text-cyan-400"></i> Miami, USA · Islamabad, PK · Jeddah, KSA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300">
+    <div class="header-top-accent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo (Official Single Logo Image) -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center space-x-1 text-sm font-medium bg-white/90 p-1.5 rounded-full border border-slate-200/80 backdrop-blur-md shadow-sm">
+          <a href="index.html" class="nav-link-item">Home</a>
+          <a href="about.html" class="nav-link-item">About</a>
+          <a href="services.html" class="nav-link-item">Services</a>
+          <a href="products.html" class="nav-link-item">Products</a>
+          <a href="gallery.html" class="nav-link-item">Gallery</a>
+          <a href="testimonials.html" class="nav-link-item">Feedback</a>
+          <a href="news.html" class="nav-link-item">Milestones</a>
+          <a href="team.html" class="nav-link-item">Team</a>
+          <a href="contact.html" class="nav-link-item nav-link-active">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 group">
+            <span>Contact Us</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <button id="mobileMenuBtn" type="button" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-cyan-600 shadow-sm transition-colors">
+            <i class="fa-solid fa-bars-staggered text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white border-l border-slate-200 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-9 w-auto object-contain">
+        </a>
+        <button id="closeMobileMenuBtn" type="button" class="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <nav class="mt-6 flex flex-col space-y-2 text-sm">
+        <a href="index.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Home</a>
+        <a href="about.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">About Us</a>
+        <a href="services.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Services</a>
+        <a href="products.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Products</a>
+        <a href="gallery.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Gallery</a>
+        <a href="testimonials.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Client Reviews</a>
+        <a href="news.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Milestones &amp; News</a>
+        <a href="team.html" class="mobile-nav-link p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium">Team</a>
+        <a href="contact.html" class="mobile-nav-link p-3 rounded-xl bg-cyan-50 text-cyan-700 font-bold border border-cyan-200">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="contact.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-indigo-600 text-white font-semibold text-sm shadow-md">Request Proposal</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE HERO BANNER (Light Corporate with Background Video) -->
+  <!-- ========================================================================= -->
+  <section class="page-hero-banner-light relative overflow-hidden">
+    <!-- Distinct Background Video Layer -->
+    <div class="page-hero-video-wrapper">
+      <video class="page-hero-video" autoplay muted loop playsinline preload="auto" poster="images/blue technology background pc 8k wallpaper.jpg">
+        <source src="images/videos/contact-tech-bg.mp4" type="video/mp4">
+      </video>
+      <div class="page-hero-video-overlay"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 relative z-10 scroll-reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-cyan-700 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-sm">
+        <i class="fa-solid fa-headset text-cyan-600"></i> Global Inquiries &amp; Offices
+      </div>
+      <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
+        Let's Build Something <br><span class="text-gradient-multi">Extraordinary Together</span>
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Speak with our senior technology consultants to scope your enterprise project, request an architecture proposal, or schedule a live software demonstration.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-medium">
+        <a href="index.html" class="hover:text-cyan-600 transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-cyan-700 font-semibold">Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTINUOUS MOVING INQUIRY & SLA CHANNELS TICKER (Corporate Light) -->
+  <!-- ========================================================================= -->
+  <section class="py-4 bg-white border-b border-slate-200 relative z-20 overflow-hidden shadow-xs">
+    <div class="marquee-container">
+      <div class="marquee-track-tech">
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-bolt text-cyan-600 text-base"></i><span>24-Hour Proposal Turnaround</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i><span>Direct WhatsApp Scoping</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-shield-halved text-purple-600 text-base"></i><span>100% Strict NDA Protection</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-headset text-pink-600 text-base"></i><span>Global Timezone Coverage</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-file-contract text-blue-600 text-base"></i><span>Milestone-Based Transparent Invoicing</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-building-shield text-amber-600 text-base"></i><span>Complimentary Architecture Estimation</span></div>
+
+        <!-- Seamless Duplicate Loop -->
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-bolt text-cyan-600 text-base"></i><span>24-Hour Proposal Turnaround</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i><span>Direct WhatsApp Scoping</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-shield-halved text-purple-600 text-base"></i><span>100% Strict NDA Protection</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-headset text-pink-600 text-base"></i><span>Global Timezone Coverage</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-file-contract text-blue-600 text-base"></i><span>Milestone-Based Transparent Invoicing</span></div>
+        <div class="marquee-tech-badge-light"><i class="fa-solid fa-building-shield text-amber-600 text-base"></i><span>Complimentary Architecture Estimation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3 GLOBAL OFFICES CARDS (Corporate Light Cards with 3D Tilt) -->
+  <!-- ========================================================================= -->
+  <section class="py-16 relative z-20 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-parent">
+        
+        <div class="glass-card-light p-8 rounded-3xl space-y-4 tilt-card reveal-up">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-700 flex items-center justify-center text-xl border border-cyan-100 shadow-sm">
+            <i class="fa-solid fa-flag-usa"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">United States Headquarters</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Miami, Florida, USA<br>
+            International Enterprise Sales &amp; Consulting
+          </p>
+          <div class="pt-3 text-xs space-y-2 text-slate-600 border-t border-slate-100 font-medium">
+            <p><i class="fa-regular fa-envelope text-cyan-600 mr-2"></i> info@nayelsolutions.com</p>
+            <p><i class="fa-solid fa-phone text-cyan-600 mr-2"></i> +92 327 8564834</p>
+          </div>
+        </div>
+
+        <div class="glass-card-light p-8 rounded-3xl space-y-4 tilt-card reveal-up" data-delay="100">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center text-xl border border-purple-100 shadow-sm">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">Pakistan Engineering Hub</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Islamabad &amp; Rawalpindi, Pakistan<br>
+            Core R&amp;D, AI &amp; Software Development
+          </p>
+          <div class="pt-3 text-xs space-y-2 text-slate-600 border-t border-slate-100 font-medium">
+            <p><i class="fa-regular fa-envelope text-purple-600 mr-2"></i> info@nayelsolutions.com</p>
+            <p><i class="fa-solid fa-phone text-purple-600 mr-2"></i> +92 327 8564834</p>
+          </div>
+        </div>
+
+        <div class="glass-card-light p-8 rounded-3xl space-y-4 tilt-card reveal-up" data-delay="200">
+          <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-700 flex items-center justify-center text-xl border border-pink-100 shadow-sm">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">Saudi Arabia Regional Office</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Jeddah &amp; Riyadh, Kingdom of Saudi Arabia<br>
+            Enterprise ERP &amp; Business Systems
+          </p>
+          <div class="pt-3 text-xs space-y-2 text-slate-600 border-t border-slate-100 font-medium">
+            <p><i class="fa-regular fa-envelope text-pink-600 mr-2"></i> info@nayelsolutions.com</p>
+            <p><i class="fa-solid fa-phone text-pink-600 mr-2"></i> +92 327 8564834</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE INQUIRY FORM & WHATSAPP CARD -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-16 relative bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Form -->
+        <div class="lg:col-span-7 reveal-left">
+          <div class="glass-card-light p-8 sm:p-12 rounded-3xl space-y-6 shadow-md border-slate-200">
+            <div>
+              <span class="text-xs font-bold text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200 uppercase tracking-wider">Fast Turnaround</span>
+              <h2 class="font-heading font-black text-2xl sm:text-3xl text-slate-900 mt-2">Request a Project Proposal</h2>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">Fill out the details below and our team will get back to you within 24 hours.</p>
+            </div>
+
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Full Name *</label>
+                  <input type="text" required placeholder="John Doe" class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Email Address *</label>
+                  <input type="email" required placeholder="john@example.com" class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Phone / WhatsApp</label>
+                  <input type="tel" placeholder="+1 234 567 8900" class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Company / Organization</label>
+                  <input type="text" placeholder="Acme Global Inc." class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Service of Interest *</label>
+                  <select required class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm bg-white">
+                    <option value="">Select Service</option>
+                    <option value="erp">Nayel AI-ERP Suite</option>
+                    <option value="lms">Nayel Academy LMS</option>
+                    <option value="hms">Nayel Hospital HMS</option>
+                    <option value="pos">Nayel Smart POS</option>
+                    <option value="cloud">Cloud Computing Development</option>
+                    <option value="web">Custom Web Portal Development</option>
+                    <option value="mobile">Mobile Application (iOS/Android)</option>
+                    <option value="ai">AI &amp; Machine Learning Automation</option>
+                    <option value="hardware">Hardware Simulators &amp; IoT</option>
+                    <option value="branding">360° Branding &amp; Marketing</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">Estimated Budget (USD)</label>
+                  <select class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm bg-white">
+                    <option value="5k">&lt; $5,000</option>
+                    <option value="10k">$5,000 - $15,000</option>
+                    <option value="25k">$15,000 - $35,000</option>
+                    <option value="50k+">$35,000 - $100,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1.5">Project Scope &amp; Details *</label>
+                <textarea rows="4" required placeholder="Tell us about your requirements, timeline, and goals..." class="form-input-custom-light w-full px-4 py-3 rounded-xl text-sm"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl font-heading font-bold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all text-sm flex items-center justify-center gap-2">
+                <span>Send Project Inquiry</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Instant WhatsApp, Direct Calls & Details -->
+        <div class="lg:col-span-5 space-y-6 reveal-right">
+          
+          <div class="glass-card-light p-8 rounded-3xl border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-teal-50 space-y-4 shadow-md tilt-card">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-md shadow-emerald-500/30">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl text-slate-900">Chat on WhatsApp</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Prefer instant communication? Connect directly with our solutions architect on WhatsApp for rapid scoping and immediate response.
+            </p>
+            <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/30 transition-all">
+              <span>Start WhatsApp Chat</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="glass-card-light p-8 rounded-3xl space-y-4 shadow-sm border-slate-200">
+            <h4 class="font-heading font-bold text-lg text-slate-900">Direct Contact Channels</h4>
+            <div class="space-y-3 text-xs text-slate-600">
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <i class="fa-regular fa-envelope text-cyan-600 text-lg"></i>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-semibold">General &amp; Sales Inquiries</p>
+                  <a href="mailto:info@nayelsolutions.com" class="text-slate-900 hover:text-cyan-600 font-semibold">info@nayelsolutions.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <i class="fa-solid fa-phone text-cyan-600 text-lg"></i>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-semibold">Direct Phone Support</p>
+                  <a href="tel:+923278564834" class="text-slate-900 hover:text-cyan-600 font-semibold">+92 327 8564834</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <i class="fa-solid fa-clock text-cyan-600 text-lg"></i>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-semibold">Working Hours</p>
+                  <p class="text-slate-900 font-semibold">Mon - Sat: 9:00 AM - 6:00 PM (GMT+5 / EST)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-slate-50/50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-2 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-circle-question"></i> COMMON INQUIRIES
+        </div>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mt-2">Frequently Asked Questions</h2>
+        <p class="text-slate-600 text-sm">Everything you need to know about partnering with Nayel Solutions.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item glass-card-light p-6 rounded-2xl reveal-up">
+          <div class="faq-question flex items-center justify-between text-base font-semibold text-slate-900 cursor-pointer">
+            <span>What is the typical turnaround timeline for custom software?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-3">
+            Turnaround depends on project scope. A standard web portal or mobile app MVP is delivered in 4 to 8 weeks. Comprehensive enterprise ERP or Hospital HMS implementations range from 8 to 16 weeks, broken down into bi-weekly milestone sprints.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item glass-card-light p-6 rounded-2xl reveal-up" data-delay="100">
+          <div class="faq-question flex items-center justify-between text-base font-semibold text-slate-900 cursor-pointer">
+            <span>Do you sign Non-Disclosure Agreements (NDA) to protect our IP?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-3">
+            Yes, absolutely. We sign strict bilateral NDAs before reviewing any proprietary business documentation, source code, or product designs. All developed intellectual property is 100% owned by the client upon completion.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item glass-card-light p-6 rounded-2xl reveal-up" data-delay="200">
+          <div class="faq-question flex items-center justify-between text-base font-semibold text-slate-900 cursor-pointer">
+            <span>How are project payments structured?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-3">
+            We use transparent milestone-based payments (e.g. 25% Advance Scoping, 25% UI/UX &amp; Architecture, 25% Sprint Development, 25% Final QA &amp; Deployment). We accept wire transfers, credit cards, Stripe, and direct bank remittances across USA, Pakistan, and GCC.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item glass-card-light p-6 rounded-2xl reveal-up" data-delay="300">
+          <div class="faq-question flex items-center justify-between text-base font-semibold text-slate-900 cursor-pointer">
+            <span>Do you provide post-launch maintenance and support?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-3">
+            Yes, every deployment includes 30 to 90 days of complimentary bug warranty and SLA support. We also provide monthly maintenance tiers covering server DevOps, security patches, database backups, and feature enhancements.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item glass-card-light p-6 rounded-2xl reveal-up" data-delay="400">
+          <div class="faq-question flex items-center justify-between text-base font-semibold text-slate-900 cursor-pointer">
+            <span>Can Nayel Solutions integrate with our existing legacy systems?</span>
+            <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-3">
+            Yes. Our engineers specialize in RESTful/GraphQL API middleware and database connectors for Oracle, SAP, Microsoft SQL Server, MySQL, and custom legacy on-premise systems.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TOAST NOTIFICATION -->
+  <!-- ========================================================================= -->
+  <div id="toastNotification" class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 max-w-md">
+    <div class="glass-card-light p-4 rounded-2xl border-cyan-500/40 shadow-2xl flex items-center gap-3 bg-white">
+      <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <p id="toastMessage" class="text-xs text-slate-800 font-medium">Thank you! Your inquiry has been received.</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CORPORATE MIDNIGHT NAVY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0b132b] text-slate-300 border-t border-slate-800/80 pt-16 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="images/logo/logo-vertical.png" alt="Nayel Solutions" class="h-10 w-auto object-contain brightness-0 invert">
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enterprise IT Consulting, Bespoke Software Engineering, Hardware Lab &amp; Cross-Platform Cloud Solutions.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xs"></i></a>
+            <a href="https://wa.me/923278564834" target="_blank" class="w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Navigation</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Home Overview</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400 transition-colors">Company &amp; Story</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">All 12 IT Services</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">In-House Products</a></li>
+            <li><a href="gallery.html" class="hover:text-cyan-400 transition-colors">Project Portfolio</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Solutions -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Products &amp; Labs</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">ERP OnClick Enterprise</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Nayel Academy LMS</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Hospital HMS Suite</a></li>
+            <li><a href="products.html" class="hover:text-cyan-400 transition-colors">Retail POS Multi-Branch</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Embedded Systems Lab</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition-colors">DevOps &amp; Cloud Infra</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <p class="font-heading font-bold text-white text-sm tracking-wider uppercase">Global Offices</p>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-cyan-400 mt-0.5"></i> <span>Islamabad, PK · Miami, USA · Jeddah, KSA</span></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400"></i> <a href="tel:+923278564834" class="hover:text-white">+92 327 8564834</a></p>
+            <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-cyan-400"></i> <a href="mailto:info@nayelsolutions.com" class="hover:text-white">info@nayelsolutions.com</a></p>
+            <div class="pt-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-semibold">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Accepting New Projects 2026
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Nayel Solutions. All rights reserved.</p>
+        <div class="flex items-center space-x-6 text-slate-400">
+          <a href="contact.html" class="hover:text-cyan-400">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-cyan-400">Terms of Service</a>
+          <a href="contact.html" class="hover:text-cyan-400">Security SLA</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <a href="https://wa.me/923278564834?text=Hello%20Nayel%20Solutions,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 text-white shadow-xl hover:scale-110 transition-transform" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+923278564834" class="flex items-center justify-center w-11 h-11 rounded-full bg-cyan-600 text-white shadow-lg hover:scale-110 transition-transform" aria-label="Call Direct">
+      <i class="fa-solid fa-phone text-base"></i>
+    </a>
+    <button id="scrollToTopBtn" type="button" aria-label="Scroll to top" class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-slate-700 shadow-md border border-slate-200 opacity-0 pointer-events-none transition-all hover:bg-slate-50">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
